@@ -45,7 +45,7 @@ body{
 #InnerBannerPromo a:hover:after { 
     background: #C8102E;
     transition: .5s ease-in-out; 
-  }
+}
 .button_clear{
     overflow:hidden;
     border: none;
@@ -112,13 +112,18 @@ body{
 }
 .iconComponents_underline:hover:after {
     content: "";
-    display: block;
     height: 2px;
     inset: auto 100% -0.3125rem 0px;
+    transform: scaleX(1);
+    transform-origin: left;
 }
 .iconComponents_underline::after {
-    background: #C8102E;
-    transition: 0.4s ease-in-out 2s;
+    display:block;
+    content: '';
+    border-bottom: solid 2.5px #C8102E;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin: left;
 }
 
 .iconWrapperacnchor{
@@ -210,7 +215,16 @@ body{
 #menu ul li a::after {
     background: #C8102E;
     width: 25px;
-    transition: 0.4s ease-in-out 0s;
+    display:block;
+    content: '';
+    border-bottom: solid 3px #C8102E;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin: left;
+}
+#menu ul li a:hover:after { 
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 
@@ -626,7 +640,20 @@ body, button, input, select, textarea {
     display: flex;
     list-style-type: none;
     margin-right: 15px;
-    cursor: pointer
+    cursor: pointer;
+    display:inline-block;
+}
+.bottomFooter li:after{
+    display:block;
+    content: '';
+    border-bottom: solid 3px #C8102E;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin: left;
+}
+.bottomFooter li:hover:after { 
+    transform: scaleX(1);
+    transform-origin: left;
 }
 #privacyPolicy{
     border-right: .0625rem solid #d3d5d7;
