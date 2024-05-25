@@ -422,9 +422,9 @@ body{
     width: 947px;; 
     height: auto;
     position: relative;
-    left: 120px;
+    left: 108px;
     top: 85px;
-    width: calc(100% - 120px);
+    width: calc(100% - 100px);
 }
 .banner {
     position: relative;
