@@ -598,7 +598,7 @@ p {
 
 #container2{
     position: absolute;
-    border: #000 solid;
+    /* border: #000 solid; */
 }
 
 .footer{
