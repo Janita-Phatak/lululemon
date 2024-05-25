@@ -178,8 +178,8 @@ body{
     text-align:left;
     letter-spacing: .075rem;
     line-height: 1.25rem;
-    font-size: 1rem;
-
+    font-size: 0.828rem;
+    font-style: normal;
 }
 #menu ul li:last-child a{
     color: #c8102e;
@@ -353,4 +353,73 @@ body{
     position: relative;
     display: block;
     width: 100%;
+    /* font-size: 1.0625rem; */
+    line-height: 1.1764705882;
+    font-weight: 400;
+}
+.sign-in_profile{
+    margin-top: -0.0625rem;
+    position: relative;
+    margin-left: -2px;
+    padding-right: 0.625rem;
+}
+.anchoriconWrapper{
+    font-size: 0.875rem;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    line-height: 1.42857;
+    text-decoration: none;
+    color: inherit;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+.iconComponents_icon{
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: 0.1875rem;
+    margin-right: 0.1875rem
+}
+.iconComponents_underline{
+    font-size: 0.875rem;
+    margin-left: 0.5rem;
+    position: relative;
+}
+
+.secondary_cartIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: .75rem;
+    font-weight: 500;
+    text-align: center;
+    color: #c8102e;
+    margin-left: 0.1875rem;
+    margin-right: 0.1875rem;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+    
+.secondary_cartIcon a{
+    padding: 0.625rem 0 0.625rem 0.625rem;
+    margin-bottom: 0.375rem;
+    font-weight: 400;
+}
+.secondary_cartIcon img{
+	position:absolute;
+	left:3.25px;
+	top:0.25px;
+}
+
+#cart-total{
+    color:rgba(200.00000327825546, 16.000000946223736, 46.000001057982445, 1);
+	position:absolute;
+	left:14.489999771118164px;
+	top:9px;
+	text-align:center;
+	font-size:10px;
+	letter-spacing:0;
 }
