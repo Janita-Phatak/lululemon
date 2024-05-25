@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop.lululemon.com</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<style>
+body {
+    overflow-y: scroll;
+    font-family: 'Calibre', 'Helvetica Neue', Helvetica, 'Roboto', Arial, sans-serif;
+}
+#InnerBanner {
+    margin: 0 2.25rem;
+    font-size: 0.875rem;
+    font-weight: 200;
+    line-height: 1.25rem;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 8px 0px;
+}
+#InnerBannerPromo {
+    justify-content: center;
+    margin: 0 2.25rem;
+    z-index: 300;
+}
+#InnerBannerPromo p {
+    padding-left: 4px;
+    margin: 0;
+    line-height: 1.2rem;
+    color: rgba(0, 0, 0, 1);
+    font-family: Roboto;
+    text-align: left;
+    font-size: 12.140625px;
+    letter-spacing: 0;
+}
+#InnerBannerPromo a {
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+}
+#InnerBannerPromo a:after {
+    content: "";
+    background: #53565a;
+    display: block;
+    height: 0.0625rem;
+}
+#InnerBannerPromo a:hover:after {
+    background: #C8102E;
+    transition: .5s ease-in-out;
+}
+.button_clear {
+    overflow: hidden;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    height: 2.25rem;
+    right: 0;
+    top: 0;
+    width: 2.25rem;
+}
+.button_clear img {
+    margin: auto;
+    height: 1rem;
+    width: 1rem;
+    color: rgba(0, 0, 0, 1);
+}
+#top-nav {
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: white;
+}
+#options {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    padding: 0.5rem 1.5625rem;
+    background-color: rgba(250, 250, 250, 1);
+}
+.iconWrapperButton {
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-right: 24px;
+}
+.optionicon {
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.iconComponents_underline {
+    position: relative;
+    font-size: 12.359375px;
+    color: rgba(0, 0, 0, 1);
+}
+.iconComponents_underline:hover:after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #C8102E;
+    transition: 0.4s ease-in-out;
+}
+.iconWrapperacnchor {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 24px;
+}
+#menu {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 3.75rem;
+    margin: 0 auto;
+    position: relative;
+}
+#logo {
+    padding-left: 0.75rem;
+}
+#menu ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+#menu ul li a {
+    text-decoration: none;
+    font-size: 0.875rem;
+    padding: 1.625rem 0.75rem;
+    color: rgba(0, 0, 0, 0.75);
+    font-weight: 600;
+}
+#menu ul li a:hover {
+    color: #000;
+}
+.search {
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    display: flex;
+    height: 100%;
+}
+.search input {
+    font-size: 0.875rem;
+    border: none;
+    outline: none;
+    padding: 0 0.75rem;
+}
+.sign-in_profile {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    margin-left: 2.25rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.75);
+}
+.anchoriconWrapper {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+}
+.anchoriconWrapper:hover {
+    color: #000;
+}
+.iconComponents_icon {
+    height: 1rem;
+    width: 1rem;
+    margin: 0 0.5rem 0 0;
+    vertical-align: middle;
+}
+#wishlist {
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.75);
+}
+#wishlist:hover {
+    color: #000;
+}
+.secondary_cartIcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.shoppingCartCount {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2em 0.4em;
+    font-size: 0.75em;
+}
+.container1 {
+    margin-top: 3rem;
+}
+#box {
+    margin: 2rem;
+}
+#box h1 {
+    font-size: 2rem;
+}
+#box ul {
+    list-style: none;
+    padding: 0;
+}
+#box ul li {
+    margin: 0.5rem 0;
+}
+#box ul li a {
+    text-decoration: none;
+    color: #000;
+}
+#box ul li a:hover {
+    color: #C8102E;
+    transition: color 0.3s ease;
+}
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.banner img {
+    width: 100%;
+}
+.cta-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.cta-buttons .button {
+    background-color: #C8102E;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+.cta-buttons .button:hover {
+    background-color: #A60D23;
+}
+.nebula_image_button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.nebula_image_button img {
+    width: 3rem;
+    height: 3rem;
+}
+
+</style>
+<body>
+    <header>
+        <div id="InnerBanner">
+            <div id="InnerBannerPromo">
+                <p>
+                    <span>
+                        Early access: the Two-Tone Canvas Tote is back. Members have first dibs before it’s gone (again).
+                    </span>
+                    <span id="anchorHR">
+                        <a href="#" class="anchor_anchor">Shop on the App</a>
+                    </span>
+                </p>
+            </div>
+            <button class="button_clear" type="button">
+                <img src="images/cross.svg" alt="closeIcon">
+            </button>
+        </div>
+        <div id="top-nav">
+            <div id="options">
+                <div class="storeLocatorContainer">
+                    <button type="button" tabindex="0" class="iconWrapperButton" title="store locator icon">
+                        <img src="images/location.svg" alt="store locator icon" class="optionicon">
+                        <span class="iconComponents_underline">Store Locator</span>
+                    </button>
+                </div>
+                <a href="#" class="iconWrapperacnchor">
+                    <img src="images/gift.svg" alt="gift icon" class="optionicon">
+                    <span class="iconComponents_underline">Gift Cards</span>
+                </a>
+                <button class="iconWrapperButton" type="button" title="help center icon">
+                    <img src="images/help.svg" alt="help center icon" class="optionicon">
+                    <span class="iconComponents_underline">Get Help</span>
+                </button>
+                <a href="#" class="iconWrapperacnchor">
+                    <img src="images/USA.svg" alt="region selector icon" class="optionicon">
+                    <span class="iconComponents_underline">USA</span>
+                </a>
+            </div>
+            <div id="menu">
+                <div id="logo">
+                    <a href="https://shop.lululemon.com">
+                        <img src="images/logo.svg" alt="logo">
+                        <span class="hidden-visually">lululemon athletica</span>
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Like New</a></li>
+                    <li><a href="#">Father's Day</a></li>
+                </ul>
+                <div id="secondnav">
+                    <ul>
+                        <div class="search">
+                            <form autocomplete="off" action="https://shop.lululemon.com/search">
+                                <img src="images/search.svg" alt="search_closeIcon" focusable="false" a-hidden="false" title="Close">
+                                <input autocomplete="off" placeholder="Search" class="search_input" name="Ntt" type="search" value="">
+                            </form>
+                        </div>
+                        <div class="sign-in_profile">
+                            <a href="#" class="anchoriconWrapper">
+                                <img src="images/signin.svg" alt="sign in" class="iconComponents_icon" focusable="false">
+                                <span class="iconComponents_underline">Sign In</span>
+                            </a>
+                        </div>
+                        <a href="#" class="anchoriconWrapper">
+                            <img src="images/wishlist.svg" alt="wishlist" class="wish" focusable="false">
+                        </a>
+                        <div class="secondary_cartIcon">
+                            <a href="#" class="anchoriconWrapper" title="0 items" aria-label="0 items in the bag, click to view the bag">
+                                <img src="images/cart.svg" alt="cart" focusable="false" class="iconComponents_icon">
+                                <span id="cart-total" class="shoppingCartCount">0</span>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container1">
+        <div id="box">
+            <h1>lululemon</h1>
+            <ul>
+                <li><a href="#">Father's Day Gifts</a></li>
+                <li><a href="#">Women's What's New</a></li>
+                <li><a href="#">All Women's</a></li>
+                <li><a href="#">All Men's</a></li>
+                <li><a href="#">All Accessories</a></li>
+            </ul>
+        </div>
+        <div class="banner">
+            <img src="https://images.lululemon.com/is/image/lululemon/na_May24_wk4_M_Train_3_1_D_V2?wid=1600&op_usm=0.5,2,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72" alt="banner">
+            <div class="cta-buttons">
+                <a class="button tertiary-button text-button" href="#">Shop Men's What's New</a>
+            </div>
+        </div>
+    </div>
+
+    <button id="nebula_div_btn" class="nebula_image_button">
+        <img alt="Feedback" src="https://resources.digital-cloud.medallia.com/wdcus/55284/resources/image/1606143979979_Feedback-Updated.jpg">
+    </button>
+
+    <div class="content">
+        <p></p>
+    </div>
+</body>
+</html>

@@ -27,7 +27,7 @@ body{
     color:rgba(0, 0, 0, 1);
 	font-family:Roboto;
 	text-align:left;
-	font-size:12.140625px;
+	font-size: 12.140625px;
 	letter-spacing:0;
 }
 #InnerBannerPromo a{
@@ -144,7 +144,7 @@ body{
     margin: 0 auto;
     padding: 0 25px;
     background-color: white;
-    z-index: 1;
+    z-index: 30;
 }
 #logo{
     display: flex;
@@ -337,28 +337,28 @@ body{
     position: relative;
     font-size: 0.65rem;
     font-weight: 700;
-    
     text-align: center;
-    left: 0.3125rem;
+    left: 0.3420rem;
     top: 0.29875rem;
     color: rgb(200, 16, 46);
     line-height: 0;
 }
 
 .container1{
-    position: absolute;
+    /* position: relative; */
     margin-bottom: 4rem;
     padding-right: 1.5625rem;
     padding-left: 1.5625rem;
-    margin-right: auto;
-    margin-left: auto;
+    background-color: #fafafa;
+    margin: 0;
+    height: auto;
 }
 #box{
     background-color: #fafafa;
     position: absolute;
     top: 13.4375rem;
     width: 14rem;
-    z-index: 22;
+    z-index: 2;
     display: block;
 }
 #box > h1{
@@ -415,16 +415,6 @@ body{
 	line-height:px;
 }
 
-.banner img{
-    width:947px;
-	height:524px;
-	position:relative;
-	left:0px;
-	top:0px;
-	background-image:url(images/banner.svg);
-	background-repeat:no-repeat;
-	background-size:cover;
-}
 
 .banner {
     width: 947px;; 
@@ -434,6 +424,57 @@ body{
     top: 85px;
     width: calc(100% - 120px);
 }
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.banner img {
+    width: 100%;
+}
+.cta-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: flex-end;
+    gap: 1rem;
+    position: absolute;
+    z-index: 21;
+}
+
+.tertiary-button {
+    background-color: #fff;
+    border-color: #000;
+    color: #000;
+}
+
+.button {
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+}
+
+.button:hover{
+    background: #000;
+    color: #fff;
+}
+
+.text-button {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.075rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
 .nebula_image_button {
     padding: 0px;
     right: 0px;
