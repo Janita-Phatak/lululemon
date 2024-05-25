@@ -434,6 +434,41 @@ body{
     top: 85px;
     width: calc(100% - 120px);
 }
+.nebula_image_button {
+    padding: 0px;
+    right: 0px;
+    top: unset !important;
+    border: none;
+    z-index: 99999990 !important;
+    position: fixed !important;
+    cursor: pointer !important;
+    line-height: 1px !important;
+    width: 26px;
+    height: 78px;
+    bottom: 250.5px !important;
+    margin-bottom: 0px !important;
+    background: transparent !important;
+}
+
+.nebula_image_button img {
+    width: inherit;
+    height: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+body, button, input, select, textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
 
 .footer{
     position: relative;
