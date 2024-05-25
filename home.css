@@ -4,6 +4,12 @@
 body{
     overflow-y: scroll;
     font-family: 'Calibre', 'Helvetica Neue', Helvetica, "Roboto", Arial, sans-serif;
+    background-color: #fafafa;
+     margin: 0;
+}
+header{
+    background-color: white;
+    margin: 0;
 }
 #InnerBanner{
     margin: 0 2.25rem;
@@ -13,7 +19,7 @@ body{
     line-height: 1.25rem;
     display: flex;
     justify-content: center;
-    padding: 0 0 8px 0px;
+    padding: 10px 0 8px 0px;
 }
 #InnerBannerPromo{
     justify-content: center;
@@ -365,12 +371,11 @@ body{
 
 .container1{
     position: relative;
-    margin-bottom: 4rem;
     padding-right: 1.5625rem;
-    padding-left: 1.9999rem;
-    background-color: #fafafa;
+    padding-left: 1.5625rem;
     margin: 0;
     height: auto;
+    margin-bottom: 64px;;
 }
 #box{
     background-color: #fafafa;
@@ -447,9 +452,9 @@ body{
     width: 947px;; 
     height: auto;
     position: relative;
-    left: 108px;
+    left: 110px;
     top: 85px;
-    width: calc(100% - 100px);
+    width: calc(100% - 110px);
 }
 .banner {
     position: relative;
@@ -603,9 +608,36 @@ p {
 }
 
 #container2{
-    position: absolute;
+    position: relative;
+    top:130px;
+    width: 100%;
+    margin: 0;
     /* border: #000 solid; */
 }
+#card2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 0 25px 0 25px;
+    grid-column-gap: 1.5625rem;
+}
+#card2 img{
+    width: 100%;
+    margin: 0;
+}
+
+.heading{
+    margin-top: 1rem;
+    font-size: 1.875rem;
+    line-height: 1.0666666667;
+    font-weight: 600;
+}
+.heading > p{
+    margin-top: 0.5rem;
+    font-weight: 400;
+    font-size: 1.1875rem;
+    line-height: 1.2631578947;
+}
+
 
 .footer{
     position: relative;
