@@ -217,17 +217,20 @@ body{
     width: 25px;
     display:block;
     content: '';
-    border-bottom: solid 3px #C8102E;  
+    /* border-bottom: solid 0.2px #C8102E;   */
     transform: scaleX(0);  
     transition: transform 250ms ease-in-out;
     transform-origin: left;
+    content: "";
+    bottom: 0.3125rem;
+    top: auto;
+    left: 0;
+    background: #c8102e;
 }
 #menu ul li a:hover:after { 
     transform: scaleX(1);
     transform-origin: left;
 }
-
-
 #secondnav{
     display: block;
     grid-area: secondary;
@@ -520,15 +523,81 @@ button {
     border: none;
     cursor: pointer;
 }
-
-body, button, input, select, textarea {
-    /* font-family: inherit; */
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.2;
+.grid {
+    display: grid;
+    grid-column-gap: 0.625rem;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    top: 55px;
 }
 
+.headline:hover::selection {
+    background: #000;
+    color: #fff;
+}
+
+.headline {
+    margin: 0;
+    text-align: start;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 600;
+    color:rgba(0, 0, 0, 1);
+	
+	/* position:absolute; */
+	left:0px;
+	top:0px;
+	font-family:Roboto;
+	text-align:left;
+	font-size:35.46875px;
+	letter-spacing:0;
+	line-height:px;
+}
+
+.short-description {
+    margin: 0.5rem 0 0;
+    position: relative;
+    text-align: left;
+    font-size: 16.328125px;
+    letter-spacing: 0;
+    line-height: 1.25;
+    font-size: 16.328125px;
+}
+
+.text-body-1 {
+    /* font-size: 1.1875rem; */
+    line-height: 1.2631578947;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    color:rgba(0, 0, 0, 1);
+	left:0px;
+	top:0px;
+	font-family:Roboto;
+	text-align:right;
+	font-size:16.625px;
+	letter-spacing:0;
+	line-height:px;
+}
+
+p {
+    margin: 0;
+}
+
+.short-description::selection {
+    background: #000;
+    color: #fff;
+}
+
+.indent {
+    display: inline-block;
+    margin-left: 20em;
+}
+
+#container2{
+    position: absolute;
+    border: #000 solid;
+}
 
 .footer{
     position: relative;
@@ -646,7 +715,7 @@ body, button, input, select, textarea {
 .bottomFooter li:after{
     display:block;
     content: '';
-    border-bottom: solid 3px #C8102E;  
+    border-bottom: solid 2.5px #C8102E;  
     transform: scaleX(0);  
     transition: transform 250ms ease-in-out;
     transform-origin: left;
