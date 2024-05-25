@@ -144,7 +144,7 @@ body{
     margin: 0 auto;
     padding: 0 25px;
     background-color: white;
-    z-index: 1;
+    z-index: 10;
 }
 #logo{
     display: flex;
@@ -195,6 +195,8 @@ body{
     line-height: 1.25rem;
     font-size: 0.838rem;
     font-style: normal;
+    height: 3rem;
+    align-content: center;
 }
 #menu ul li:last-child a{
     color: #c8102e;
@@ -350,8 +352,8 @@ body{
     margin-bottom: 4rem;
     padding-right: 1.5625rem;
     padding-left: 1.5625rem;
-    margin-right: 3rem;
-    margin-left: 3rem;
+    margin-right: auto;
+    margin-left: auto;
 }
 #box{
     background-color: #fafafa;
