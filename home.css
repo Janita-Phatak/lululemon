@@ -195,6 +195,8 @@ body{
     line-height: 1.25rem;
     font-size: 0.838rem;
     font-style: normal;
+    height: 3rem;
+    align-content: center;
 }
 #menu ul li:last-child a{
     color: #c8102e;
@@ -503,7 +505,7 @@ button {
 }
 
 body, button, input, select, textarea {
-    font-family: inherit;
+    /* font-family: inherit; */
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
@@ -513,9 +515,9 @@ body, button, input, select, textarea {
 
 .footer{
     position: relative;
-    /* left: 0; */
     bottom: 0;
     width: 100%;
+    background-color: white;
 }
 .footerMenu{
     display: flex;
@@ -552,8 +554,9 @@ body, button, input, select, textarea {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     line-height: 1.1764705882;
-    font-size: 1.0625rem;
-    letter-spacing: normal;
+    /* font-size: 1.0625rem; */
+    font-size: .875rem;
+    letter-spacing: .04rem;
 }
 .subHeader {
     font-weight: 600;
@@ -589,8 +592,9 @@ body, button, input, select, textarea {
     line-height: 1.4285714286;
     letter-spacing: .075rem;
     line-height: 1.1764705882;
-    font-size: 1.0625rem;
-    letter-spacing: normal;
+    /* font-size: 1.0625rem; */
+    font-size: .875rem;
+    letter-spacing: .04rem;
 }
 .bottomFooter{
     text-align: center;
