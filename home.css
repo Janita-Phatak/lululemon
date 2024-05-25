@@ -346,19 +346,19 @@ body{
 }
 
 .container1{
-    position: absolute;
+    position: relative;
     margin-bottom: 4rem;
     padding-right: 1.5625rem;
     padding-left: 1.5625rem;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 3rem;
+    margin-left: 3rem;
 }
 #box{
     background-color: #fafafa;
     position: absolute;
     top: 13.4375rem;
     width: 14rem;
-    z-index: 22;
+    z-index: 3;
     display: block;
 }
 #box > h1{
@@ -416,8 +416,8 @@ body{
 }
 
 .banner img{
-    width:947px;
-	height:524px;
+    width: 100%;
+    height: auto;
 	position:relative;
 	left:0px;
 	top:0px;
@@ -462,7 +462,7 @@ button {
 }
 
 body, button, input, select, textarea {
-    font-family: inherit;
+    /* font-family: inherit; */
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
@@ -472,9 +472,9 @@ body, button, input, select, textarea {
 
 .footer{
     position: relative;
-    /* left: 0; */
     bottom: 0;
     width: 100%;
+    background-color: white;
 }
 .footerMenu{
     display: flex;
@@ -511,8 +511,9 @@ body, button, input, select, textarea {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     line-height: 1.1764705882;
-    font-size: 1.0625rem;
-    letter-spacing: normal;
+    /* font-size: 1.0625rem; */
+    font-size: .875rem;
+    letter-spacing: .04rem;
 }
 .subHeader {
     font-weight: 600;
@@ -548,8 +549,9 @@ body, button, input, select, textarea {
     line-height: 1.4285714286;
     letter-spacing: .075rem;
     line-height: 1.1764705882;
-    font-size: 1.0625rem;
-    letter-spacing: normal;
+    /* font-size: 1.0625rem; */
+    font-size: .875rem;
+    letter-spacing: .04rem;
 }
 .bottomFooter{
     text-align: center;
