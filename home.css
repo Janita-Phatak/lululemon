@@ -440,8 +440,10 @@ body{
     justify-content: right;
     align-items: flex-end;
     gap: 1rem;
-    position: absolute;
+    position: relative;
     z-index: 21;
+    margin-top: -5rem;
+    margin-right: 1.5rem;
 }
 
 .tertiary-button {
