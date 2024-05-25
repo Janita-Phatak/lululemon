@@ -387,6 +387,8 @@ body{
 	text-align:left;
 	font-size:35.3125px;
 	letter-spacing:0;
+    padding-top: 1.34rem;
+    margin-bottom: 0;
 }
 #box ul{
     position: relative;
@@ -558,7 +560,6 @@ body, button, input, select, textarea {
     padding: 1rem 0 0;
     display: inline-block;
     border: none;
-    cursor: pointer;
 }
 .footerInnerSection ul{
     list-style-type: none;
@@ -574,6 +575,22 @@ body, button, input, select, textarea {
     /* font-size: 1.0625rem; */
     font-size: .875rem;
     letter-spacing: .04rem;
+}
+.footerInnerSection span{
+    display: inline-block;
+    cursor: pointer;
+}
+.footerInnerSection span:after{
+    display:block;
+    content: '';
+    border-bottom: solid 2.4px #C8102E;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin: left;
+}
+.footerInnerSection span:hover:after { 
+    transform: scaleX(1);
+    transform-origin: left;
 }
 .subHeader {
     font-weight: 600;
@@ -594,7 +611,6 @@ body, button, input, select, textarea {
 .footerInnerSection2{
     display: inline-block;
     border: none;
-    cursor: pointer;
 }
 .footerInnerSection2 li{
     padding: 0.5rem 0;
@@ -612,6 +628,22 @@ body, button, input, select, textarea {
     /* font-size: 1.0625rem; */
     font-size: .875rem;
     letter-spacing: .04rem;
+}
+.footerInnerSection2 span{
+    display: inline-block;
+    cursor: pointer;
+}
+.footerInnerSection2 span:after{
+    display:block;
+    content: '';
+    border-bottom: solid 2.4px #C8102E;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin: left;
+}
+.footerInnerSection2 span:hover:after { 
+    transform: scaleX(1);
+    transform-origin: left;
 }
 .bottomFooter{
     text-align: center;
