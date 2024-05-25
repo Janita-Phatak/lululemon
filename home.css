@@ -386,7 +386,7 @@ body{
 	height:48px;
 	left:0px;
 	top:32px;
-	font-family:Roboto;
+	font-family: inherit;
 	text-align:left;
 	font-size:35.3125px;
 	letter-spacing:0;
@@ -425,7 +425,6 @@ body{
     cursor: pointer;
     padding-bottom: 0.25rem;
     color:rgba(0, 0, 0, 1);
-	width:155px;
 	height:24px;
 	left:0px;
 	top:0px;
@@ -434,8 +433,32 @@ body{
 	font-size:16.328125px;
 	letter-spacing:0;
 	line-height:px;
+    display: inline-block;
 }
-
+#box ul li a:after{
+    display: block;
+    content: ""; 
+}
+#box ul li a:hover:after { 
+    background: #C8102E;
+    border-bottom: solid 0.2px #C8102E; 
+}
+/* #InnerBannerPromo a{
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+} */
+/* #InnerBannerPromo a:after {
+    content: "";
+    background: #53565a;
+    display: block;
+    height: 0.0625rem; 
+} */
+/* #InnerBannerPromo a:hover:after { 
+    background: #C8102E;
+    transition: .5s ease-in-out; 
+} */
 
 .banner {
     width: 947px;; 
