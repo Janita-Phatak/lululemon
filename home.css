@@ -200,7 +200,6 @@ body{
     line-height: 1.25rem;
     font-size: 0.838rem;
     font-style: normal;
-    height: 3rem;
     align-content: center;
 }
 #menu ul li:last-child a{
@@ -364,10 +363,10 @@ body{
 }
 
 .container1{
-    /* position: relative; */
+    position: relative;
     margin-bottom: 4rem;
     padding-right: 1.5625rem;
-    padding-left: 1.5625rem;
+    padding-left: 1.9999rem;
     background-color: #fafafa;
     margin: 0;
     height: auto;
@@ -376,7 +375,6 @@ body{
     background-color: #fafafa;
     position: absolute;
     top: 13.4375rem;
-    width: 14rem;
     z-index: 2;
     display: block;
 }
