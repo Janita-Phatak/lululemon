@@ -3,7 +3,7 @@
 }
 body{
     overflow-y: scroll;
-    font-family: 'Calibre', 'Helvetica Neue', Helvetica, "Roboto", Arial, sans-serif;
+    font-family: 'Calibre', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
     background-color: #fafafa;
      margin: 0;
 }
@@ -31,7 +31,7 @@ header{
     margin: 0;
     line-height: 1.2rem;
     color:rgba(0, 0, 0, 1);
-	font-family:Roboto;
+    font-family: 'Roboto';
 	text-align:left;
 	font-size: 12.140625px;
 	letter-spacing:0;
@@ -105,7 +105,6 @@ header{
 .optionicon{
     height: 1rem;
     width: 1rem;
-    margin-right: 0.5rem;
     cursor: pointer;
     vertical-align: middle;
 }
@@ -285,11 +284,12 @@ header{
     background: #fff;
     cursor: pointer;
     box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
-    border: 1.5px solid #000;
+    border: 2px solid #000;
     margin: 0;
     min-width: 264px;
     position: relative;
     color: rgba(0, 0, 0, 1);
+    cursor: text;
 }
 .sign-in_profile{
     margin-top: -0.0625rem;
@@ -396,7 +396,7 @@ header{
 	font-size:35.3125px;
 	letter-spacing:0;
     padding-top: 1.34rem;
-    margin-bottom: 0;
+    margin-bottom: 0.75rem;
 }
 #box ul{
     position: relative;
@@ -472,7 +472,6 @@ header{
     align-items: flex-end;
     gap: 1rem;
     position: relative;
-    z-index: 21;
     margin-top: -5rem;
     margin-right: 1.5rem;
 }
@@ -507,7 +506,7 @@ header{
     -webkit-font-smoothing: antialiased;
     letter-spacing: 0.075rem;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 600;
 }
 
@@ -553,19 +552,15 @@ button {
 .headline {
     margin: 0;
     text-align: start;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     line-height: 1.2;
-    font-weight: 600;
+    font-weight: 700;
     color:rgba(0, 0, 0, 1);
-	
-	/* position:absolute; */
 	left:0px;
 	top:0px;
-	font-family:Roboto;
+    font-family: 'Roboto';
 	text-align:left;
-	font-size:35.46875px;
-	letter-spacing:0;
-	line-height:px;
+	letter-spacing:0.1rem;
 }
 
 .short-description {
@@ -641,7 +636,7 @@ p {
 
 .heading{
     margin-top: 1rem;
-    font-size: 1.875rem;
+    font-size: 1.75rem;
     line-height: 1.0666666667;
     font-weight: 600;
 }
@@ -651,6 +646,7 @@ p {
     /* font-size: 1.1875rem; */
     font-size: 1rem;
     line-height: 1.2631578947;
+    letter-spacing: 0.065rem;
 }
 
 .button-wrapper {
@@ -665,8 +661,6 @@ p {
     display: inline-block;
     margin-top: 1rem;
     position: relative;
-    z-index: 21;
-    
 }
 
 .secondary-action-button {
@@ -677,11 +671,6 @@ p {
 .mobile-block {
     display: inline-flex;
     width: auto;
-}
-
-.tertiary-button {
-    border-color: #000;
-    color: #000;
 }
 
 .button {
@@ -702,11 +691,6 @@ p {
     text-transform: uppercase;
 }
 
-.text-button {
-    font-size: 1rem;
-    font-weight: 600;
-}
-
 .secondary-button {
     background-color: #000;
     border-color: #000;
@@ -715,16 +699,9 @@ p {
     position: relative;  
 }
 
-.tertiary-button {
-    background-color: #fff;
-    border-color: #000;
-    color: #000;
-    z-index: 22;
-}
-
 .firstbtn:hover{
-    background-color: #53565A; 
-    border: #53565A;  
+    background-color: #53565A;
+    border-color: #53565A;
 }
 .adcontainer {
     position: relative;
@@ -784,6 +761,7 @@ p {
     font-size: 1.1875rem;
     line-height: 1.263;
 }
+
 
 .slider-wrapper {
     position: relative;
@@ -847,11 +825,14 @@ p {
     padding: 0;
 }
 
+
 .footer{
     position: relative;
     bottom: 0;
     width: 100%;
     background-color: white;
+    top: 8rem;
+    padding-top: 0.875rem;
 }
 .footerMenu{
     display: flex;
@@ -1005,18 +986,4 @@ p {
 #privacyPolicy{
     border-right: .0625rem solid #d3d5d7;
     padding-right: 15px;
-}
-.content {
-    height: 40vh;
-    color: black;
-    position: relative;
-    display: block;
-    width: 100%;
-    /* font-size: 1.0625rem; */
-    line-height: 1.1764705882;
-    font-weight: 400;
-    color:rgba(83.00000265240669, 86.00000247359276, 90.00000223517418, 1);
-	text-align:left;
-	font-size:14.7421875px;
-	letter-spacing:0;
 }
