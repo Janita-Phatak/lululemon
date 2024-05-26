@@ -391,7 +391,7 @@ header{
 	height:48px;
 	left:0px;
 	top:32px;
-	font-family: 'Robot';
+	font-family: inherit;
 	text-align:left;
 	font-size:35.3125px;
 	letter-spacing:0;
