@@ -616,6 +616,10 @@ p {
     background: #000;
     color: #fff;
 }
+.indent::selection{
+    background: #000;
+    color: #fff;
+}
 
 .indent {
     display: inline-block;
@@ -639,6 +643,15 @@ p {
     width: 100%;
     margin: 0;
 }
+.heading::selection{
+    background: #000;
+    color: #fff;
+}
+.about::selection{
+    background: #000;
+    color: #fff;
+    cursor: text;
+}
 
 .heading{
     margin-top: 1rem;
@@ -646,13 +659,87 @@ p {
     line-height: 1.0666666667;
     font-weight: 600;
 }
-.heading > p{
+.about{
     margin-top: 0.5rem;
     font-weight: 400;
-    font-size: 1.1875rem;
+    /* font-size: 1.1875rem; */
+    font-size: 1rem;
     line-height: 1.2631578947;
 }
 
+.button-wrapper {
+    width: 100%;
+}
+
+.primary-action-button:not(:only-child) {
+    margin-right: 0.5rem;
+}
+
+.primary-action-button {
+    display: inline-block;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 21;
+    
+}
+
+.secondary-action-button {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.mobile-block {
+    display: inline-flex;
+    width: auto;
+}
+
+.tertiary-button {
+    border-color: #000;
+    color: #000;
+}
+
+.button {
+    background-color: #fff;
+    border: 0.0625rem solid;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.text-button, .text-subtitle {
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: .075rem;
+    text-transform: uppercase;
+}
+
+.text-button {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.secondary-button {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+    cursor: pointer;
+    position: relative;  
+}
+
+.tertiary-button {
+    background-color: #fff;
+    border-color: #000;
+    color: #000;
+    z-index: 22;
+}
+
+.firstbtn:hover{
+    background-color: #53565A; 
+    border: #53565A;  
+}
 
 .footer{
     position: relative;
