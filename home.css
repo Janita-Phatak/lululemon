@@ -1,6 +1,6 @@
-/* *, :after, :before{
+*, :after, :before{
     box-sizing: border-box;
-} */
+}
 body{
     overflow-y: scroll;
     font-family: 'Calibre', 'Helvetica Neue', Helvetica, "Roboto", Arial, sans-serif;
@@ -384,6 +384,7 @@ header{
     z-index: 2;
     display: block;
 }
+
 #box > h1{
     color:rgba(0, 0, 0, 1);
 	width:208px;
@@ -616,7 +617,7 @@ p {
     top:130px;
     width: 100%;
     margin: 0;
-    /* border: #000 solid; */
+    margin-bottom: 64px;
 }
 #card2{
     display: grid;
@@ -725,6 +726,23 @@ p {
     background-color: #53565A; 
     border: #53565A;  
 }
+#container4 {
+    position: relative;
+    top: 130px;
+    margin: 0;
+    margin-bottom: 64px;
+    padding: 0 25px;
+    box-sizing: border-box;
+}
+
+#container4 img {
+    width: 100%;
+    padding: 0; 
+    margin: 0;
+    display: block; 
+    box-sizing: border-box; 
+}
+
 
 .footer{
     position: relative;
