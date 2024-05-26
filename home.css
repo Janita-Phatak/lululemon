@@ -823,6 +823,7 @@ p {
     margin: 0;
     padding: 0;
 }
+
 .productinfo{
     flex-direction: row;
     justify-content: space-between;
@@ -835,6 +836,7 @@ p {
 }
 
 
+
 .footer{
     position: relative;
     bottom: 0;
@@ -842,6 +844,7 @@ p {
     background-color: white;
     top: 8rem;
     padding-top: 0.875rem;
+    padding: 0 25px
 }
 .footerMenu{
     display: flex;
