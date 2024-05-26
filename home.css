@@ -823,6 +823,11 @@ p {
     margin: 0;
     padding: 0;
 }
+.productinfo{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
 
 
 .footer{
