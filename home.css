@@ -726,7 +726,7 @@ p {
     background-color: #53565A; 
     border: #53565A;  
 }
-#container4 {
+.adcontainer {
     position: relative;
     top: 130px;
     margin: 0;
@@ -735,7 +735,7 @@ p {
     box-sizing: border-box;
 }
 
-#container4 img {
+.adcontainer img {
     width: 100%;
     padding: 0; 
     margin: 0;
