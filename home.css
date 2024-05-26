@@ -792,7 +792,7 @@ p {
     justify-content: center;
     list-style: none;
     padding: 0;
-    margin: 130px 0 20px 0;
+    margin: 10rem 0 20px 0;
 }
 
 .dot-button {
@@ -824,9 +824,14 @@ p {
     padding: 0;
 }
 .productinfo{
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1rem;
     display: flex;
-    justify-content: center;
-    align-items: baseline;
+}
+.productinfo h3{
+    margin: 0;
+    font-size: 1.1rem;
 }
 
 
