@@ -79,13 +79,14 @@ header{
     right: 0;
     left: 0;
     background-color: white;
+    z-index: 1;
 }
 #options{
     align-items: center;
     display: flex;
     justify-content: flex-end;
     margin: 0 auto;
-    padding: 0.5rem 1.5625rem;
+    height: 3rem;
     background-color:rgba(250.00000029802322, 250.00000029802322, 250.00000029802322, 1);
 }
 
@@ -124,7 +125,7 @@ header{
     transform-origin: left;
 }
 .iconComponents_underline::after {
-    display:block;
+    display: block;
     content: '';
     border-bottom: solid 2.5px #C8102E;  
     transform: scaleX(0);  
@@ -389,7 +390,7 @@ header{
 	height:48px;
 	left:0px;
 	top:32px;
-	font-family: inherit;
+	font-family: 'Robot';
 	text-align:left;
 	font-size:35.3125px;
 	letter-spacing:0;
@@ -446,22 +447,6 @@ header{
     background: #C8102E;
     border-bottom: solid 0.2px #C8102E; 
 }
-/* #InnerBannerPromo a{
-    cursor: pointer;
-    color: #000;
-    text-decoration: none;
-    display: inline-block;
-} */
-/* #InnerBannerPromo a:after {
-    content: "";
-    background: #53565a;
-    display: block;
-    height: 0.0625rem; 
-} */
-/* #InnerBannerPromo a:hover:after { 
-    background: #C8102E;
-    transition: .5s ease-in-out; 
-} */
 
 .banner {
     width: 947px;; 
