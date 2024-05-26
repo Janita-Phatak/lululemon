@@ -1001,15 +1001,27 @@ p {
 }
 .footerInnerSectionSocialMedia{
     border-bottom: .0625rem solid #d3d5d7;
-    color: #53565a;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     padding-bottom: 1.5rem;
     /* margin: 2rem 1rem 0; */
 }
+.socialMediaIcons img {
+    transition: filter 0.25s ease;
+}
+
+.socialMediaIcons img:hover {
+    filter: invert(60%) sepia(10%) saturate(200%) hue-rotate(180deg);
+}
+
+
 .sticky {
     position: fixed;
     top: 0;
     width: 100%
+}
+*::selection{
+    color: white;
+    background-color: #000;
 }
