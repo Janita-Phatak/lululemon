@@ -79,7 +79,7 @@ header{
     right: 0;
     left: 0;
     background-color: white;
-    z-index: 1;
+    z-index: 10;
 }
 #options{
     align-items: center;
@@ -143,8 +143,7 @@ header{
     position: relative;
     text-decoration: none;
 }
-#menu{
-    position: fixed;
+.menu{
     right: 0;
     left: 0;
     display: grid;
@@ -155,7 +154,7 @@ header{
     margin: 0 auto;
     padding: 0 25px;
     background-color: white;
-    z-index: 30;
+    z-index: 10;
 }
 #logo{
     display: flex;
@@ -184,7 +183,7 @@ header{
     white-space: nowrap!important;
     width: 0.0625rem!important;
 }
-#menu ul{
+.menu ul{
     grid-area: primary;
     position: relative;
     transition: color .1s linear;
@@ -193,7 +192,7 @@ header{
     list-style: none;
     padding: 0;
 }
-#menu ul li a{
+.menu ul li a{
     padding: 0.3125rem 1.25rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -208,16 +207,16 @@ header{
     font-style: normal;
     align-content: center;
 }
-#menu ul li:last-child a{
+.menu ul li:last-child a{
     color: #c8102e;
 }
-#menu ul li a:hover:after {
+.menu ul li a:hover:after {
     content: "";
     display: block;
     height: 4px;
     inset: auto 100% -0.3125rem 0px;
 }
-#menu ul li a::after {
+.menu ul li a::after {
     background: #C8102E;
     width: 25px;
     display:block;
@@ -232,7 +231,7 @@ header{
     left: 0;
     background: #c8102e;
 }
-#menu ul li a:hover:after { 
+.menu ul li a:hover:after { 
     transform: scaleX(1);
     transform-origin: left;
 }
@@ -986,4 +985,26 @@ p {
 #privacyPolicy{
     border-right: .0625rem solid #d3d5d7;
     padding-right: 15px;
+}
+.socialMediaIcons{
+    transition: opacity .25s ease;
+    opacity: 1;
+    text-decoration: none;
+    /* color: inherit; */
+    /* display: inline-block; */
+    cursor: pointer;
+}
+.footerInnerSectionSocialMedia{
+    border-bottom: .0625rem solid #d3d5d7;
+    color: #53565a;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    /* margin: 2rem 1rem 0; */
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
 }
