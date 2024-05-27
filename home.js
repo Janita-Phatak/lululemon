@@ -1,18 +1,61 @@
-window.onscroll = function() {myFunction()};
+let currentSlideIndex = 0;
 
-function myFunction() {
-  var header = document.getElementById("menu");
-  var sticky = header.offsetTop;
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
+function slideImage(container, direction) {
+  const productContainer = document.querySelector(container);
+  const slides = productContainer.querySelectorAll('.product.card');
+  const visibleSlidesCount = 4;
+  const totalSlides = slides.length;
+
+  if (direction === 'left') {
+    currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+  } else if (direction === 'right') {
+    currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+  } else if (typeof direction === 'number') {
+    currentSlideIndex = direction;
   }
+
+  const startIndex = currentSlideIndex;
+  const endIndex = (currentSlideIndex + visibleSlidesCount) % totalSlides;
+
+  slides.forEach((slide, index) => {
+    if (index >= startIndex && index < startIndex + visibleSlidesCount) {
+      slide.style.display = 'block';
+    } else if (endIndex < startIndex && (index >= startIndex || index < endIndex)) {
+      slide.style.display = 'block';
+    } else {
+      slide.style.display = 'none';
+    }
+  });
+
+  updateDotList(currentSlideIndex);
 }
 
-function removeDiv() {
-  const div = document.getElementById("InnerBanner");
-  div.style.transition='opacity 1s';
-  setInterval(() => div.style.opacity=0, 100);
-  setInterval(() => div.remove(), 1000);
+function getCurrentSlideIndex() {
+  const activeDot = document.querySelector('.dot-button.active');
+  return parseInt(activeDot.getAttribute('aria-label').split('of')[0].split(' ')[1]) - 1;
 }
+
+function updateDotList(newSlideIndex) {
+  const dotButtons = document.querySelectorAll('.dot-button');
+  dotButtons.forEach((dotButton, index) => {
+    dotButton.classList.toggle('active', index === newSlideIndex);
+  });
+}
+
+// Add event listeners to arrows
+const leftArrow = document.querySelector('.arrow-left');
+const rightArrow = document.querySelector('.arrow-right');
+
+leftArrow.addEventListener('click', () => slideImage('.product-container', 'left'));
+rightArrow.addEventListener('click', () => slideImage('.product-container', 'right'));
+
+// Add event listeners to dot buttons
+const dotButtons = document.querySelectorAll('.dot-button');
+dotButtons.forEach((dotButton, index) => {
+  dotButton.addEventListener('click', () => slideImage('.product-container', index));
+});
+
+// Initialize the first 4 slides
+document.addEventListener('DOMContentLoaded', () => {
+  slideImage('.product-container', 0);
+});

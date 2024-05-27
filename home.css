@@ -765,6 +765,7 @@ p {
 .slider-wrapper {
     position: relative;
     margin-right: 0px;
+    overflow: hidden;
 }
 
 .arrow {
