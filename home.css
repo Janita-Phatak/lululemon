@@ -787,6 +787,13 @@ p {
 .arrow-right {
     right: 45px;
 }
+
+.arrow-left2 {
+    left: 20px;
+ }
+.arrow-right2 {
+    right: 45px;
+}
  
 .dot-list {
     display: flex;
@@ -811,6 +818,21 @@ p {
 .dot-button.active span {
     background-color: #53565a;
 }
+.dot-button2 {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.dot-button2 span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #d3d5d7;
+    border-radius: 50%;
+}
+.dot-button2.active span {
+    background-color: #53565a;
+}
 .ad {
     display: flex;
     align-items: center;
@@ -818,6 +840,14 @@ p {
  }
 
 .product-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:18.500px;
+    margin: 0;
+    padding: 0;
+}
+
+.product-container2{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap:18.500px;
