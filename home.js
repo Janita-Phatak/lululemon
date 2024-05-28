@@ -126,3 +126,52 @@ dotButtons2.forEach((dotButton, index) => {
 document.addEventListener('DOMContentLoaded', () => {
   slideImage2('.product-container2', 0);
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Hide the detailNav by default
+  const detailNav = document.querySelector('.detailNav');
+  detailNav.style.display = 'none';
+
+  // Get all menu items
+  const menuItems = document.querySelectorAll('.menu ul li');
+
+  // Get the Shoes menu item
+  const shoesMenuItem = document.querySelector('.menu ul li:nth-child(4)');
+
+  // Flag to track if the detailNav is being hovered
+  let isDetailNavHovered = false;
+
+  // Add event listeners to show/hide the detailNav
+  shoesMenuItem.addEventListener('mouseenter', function() {
+      // Show the detailNav when hovering over the Shoes menu item
+      detailNav.style.display = 'grid';
+  });
+
+  shoesMenuItem.addEventListener('mouseleave', function() {
+      // Hide the detailNav when mouse leaves the Shoes menu item, unless detailNav is being hovered
+      if (!isDetailNavHovered) {
+          detailNav.style.display = 'none';
+      }
+  });
+
+  // Add event listener to detailNav to set isDetailNavHovered flag
+  detailNav.addEventListener('mouseenter', function() {
+      isDetailNavHovered = true;
+  });
+
+  // Add event listener to detailNav to reset isDetailNavHovered flag
+  detailNav.addEventListener('mouseleave', function() {
+      isDetailNavHovered = false;
+  });
+
+  // Add event listeners to hide the detailNav when hovering over other menu items
+  menuItems.forEach(function(menuItem) {
+      if (menuItem !== shoesMenuItem) {
+          menuItem.addEventListener('mouseenter', function() {
+              // Hide the detailNav when hovering over other menu items
+              detailNav.style.display = 'none';
+          });
+      }
+  });
+});
