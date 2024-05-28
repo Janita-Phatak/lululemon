@@ -20,6 +20,7 @@ header{
     display: flex;
     justify-content: center;
     padding: 10px 0 8px 0px;
+    
 }
 #InnerBannerPromo{
     justify-content: center;
@@ -79,7 +80,7 @@ header{
     right: 0;
     left: 0;
     background-color: white;
-    z-index: 10;
+    z-index: 40;
 }
 #options{
     align-items: center;
@@ -370,13 +371,14 @@ header{
     line-height: 0;
 }
 .detailNav {
-    display: none;
+    /* visibility: hidden; */
+    /* opacity: 0; */
     width: 100%;
     position: fixed;
     z-index:10;
     background-color: white;
-    padding-top:30px;
-    margin-top:120px;
+    padding-top:130px;
+    margin-top:20px;
     box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
     display: grid;
     grid-template-areas:
@@ -391,8 +393,10 @@ header{
     
     /* border: black solid; */
 }
-.menu ul li:nth-child(4) a:hover ~.detailNav {
+.menu ul:hover .detailNav {
     display: grid;
+    /* visibility: visible;
+    opacity: 1; */
 }
 
 

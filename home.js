@@ -127,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
   slideImage2('.product-container2', 0);
 });
 
-
 document.addEventListener('DOMContentLoaded', function() {
   // Hide the detailNav by default
   const detailNav = document.querySelector('.detailNav');
@@ -139,30 +138,39 @@ document.addEventListener('DOMContentLoaded', function() {
   // Get the Shoes menu item
   const shoesMenuItem = document.querySelector('.menu ul li:nth-child(4)');
 
-  // Flag to track if the detailNav is being hovered
+  // Flag to track if the detailNav or Shoes menu item is being hovered
   let isDetailNavHovered = false;
+  let isShoesMenuItemHovered = false;
 
   // Add event listeners to show/hide the detailNav
   shoesMenuItem.addEventListener('mouseenter', function() {
       // Show the detailNav when hovering over the Shoes menu item
       detailNav.style.display = 'grid';
+      isShoesMenuItemHovered = true;
   });
 
-  shoesMenuItem.addEventListener('mouseleave', function() {
-      // Hide the detailNav when mouse leaves the Shoes menu item, unless detailNav is being hovered
-      if (!isDetailNavHovered) {
+  shoesMenuItem.addEventListener('mouseleave', function(event) {
+      // Check if the mouse is moving into the detailNav
+      if (!detailNav.contains(event.relatedTarget)) {
           detailNav.style.display = 'none';
+          isShoesMenuItemHovered = false;
       }
   });
 
   // Add event listener to detailNav to set isDetailNavHovered flag
   detailNav.addEventListener('mouseenter', function() {
       isDetailNavHovered = true;
+      detailNav.style.display = 'grid';
   });
 
-  // Add event listener to detailNav to reset isDetailNavHovered flag
-  detailNav.addEventListener('mouseleave', function() {
-      isDetailNavHovered = false;
+  // Add event listener to detailNav to reset isDetailNavHovered flag and hide detailNav if mouse leaves
+  detailNav.addEventListener('mouseleave', function(event) {
+      // Check if the mouse is moving into the Shoes menu item
+      if (!shoesMenuItem.contains(event.relatedTarget)) {
+          isDetailNavHovered = false;
+          detailNav.style.display = 'none';
+          isShoesMenuItemHovered = false;
+      }
   });
 
   // Add event listeners to hide the detailNav when hovering over other menu items
@@ -171,7 +179,12 @@ document.addEventListener('DOMContentLoaded', function() {
           menuItem.addEventListener('mouseenter', function() {
               // Hide the detailNav when hovering over other menu items
               detailNav.style.display = 'none';
+              isShoesMenuItemHovered = false;
           });
       }
   });
 });
+
+
+
+y
