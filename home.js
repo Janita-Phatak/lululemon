@@ -17,38 +17,7 @@ function removeDiv() {
   setInterval(() => div.remove(), 1000);
 }
 
-let currentSlideIndex = 0;
 let currentSlideIndex2 = 0;
-
-function slideImage(container, direction, element) {
-  const productContainer = document.querySelector(container);
-  const slides = productContainer.querySelectorAll('.product.card');
-  const visibleSlidesCount = 4;
-  const totalSlides = slides.length;
-
-  if (direction === 'left') {
-    currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
-  } else if (direction === 'right') {
-    currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
-  } else if (typeof direction === 'number') {
-    currentSlideIndex = direction;
-  }
-
-  const startIndex = currentSlideIndex;
-  const endIndex = (currentSlideIndex + visibleSlidesCount) % totalSlides;
-
-  slides.forEach((slide, index) => {
-    if (index >= startIndex && index < startIndex + visibleSlidesCount) {
-      slide.style.display = 'block';
-    } else if (endIndex < startIndex && (index >= startIndex || index < endIndex)) {
-      slide.style.display = 'block';
-    } else {
-      slide.style.display = 'none';
-    }
-  });
-
-  updateDotList(currentSlideIndex, '.dot-button');
-}
 
 function slideImage2(container, direction) {
   const productContainer = document.querySelector(container);
@@ -92,29 +61,12 @@ function updateDotList(newSlideIndex, element) {
   });
 }
 
-// Add event listeners to arrows
-const leftArrow = document.querySelector('.arrow-left');
-const rightArrow = document.querySelector('.arrow-right');
-
-leftArrow.addEventListener('click', () => slideImage('.product-container', 'left'));
-rightArrow.addEventListener('click', () => slideImage('.product-container', 'right'));
 
 const leftArrow2 = document.querySelector('.arrow-left2');
 const rightArrow2 = document.querySelector('.arrow-right2');
 
 leftArrow2.addEventListener('click', () => slideImage2('.product-container2', 'left'));
 rightArrow2.addEventListener('click', () => slideImage2('.product-container2', 'right'));
-
-// Add event listeners to dot buttons
-const dotButtons = document.querySelectorAll('.dot-button');
-dotButtons.forEach((dotButton, index) => {
-  dotButton.addEventListener('click', () => slideImage('.product-container', index));
-});
-
-// Initialize the first 4 slides
-document.addEventListener('DOMContentLoaded', () => {
-  slideImage('.product-container', 0);
-});
 
 // Add event listeners to dot buttons
 const dotButtons2 = document.querySelectorAll('.dot-button2');
@@ -125,4 +77,34 @@ dotButtons2.forEach((dotButton, index) => {
 // Initialize the first 4 slides
 document.addEventListener('DOMContentLoaded', () => {
   slideImage2('.product-container2', 0);
+});
+
+var swiper = new Swiper(".slide-content", {
+  slidesPerView: 4,
+  spaceBetween: 25,
+  loop: true,
+  // centerSlide: 'true',
+  fade: 'true',
+  grabCursor: 'true',
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  //   dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // breakpoints:{
+  //     0: {
+  //         slidesPerView: 1,
+  //     },
+  //     520: {
+  //         slidesPerView: 2,
+  //     },
+  //     950: {
+  //         slidesPerView: 3,
+  //     },
+  // },
 });
