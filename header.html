@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .detailed_detailNavIner__1r3z6 {
+        .detailNav {
             display: grid;
             grid-template-areas:
                 "features maindetail promoblock"
@@ -12,13 +12,11 @@
             grid-template-columns: 0 repeat(11, 1fr) 0;
             grid-template-rows: auto auto;
             row-gap: 2rem;
-            width: 100%;
-            max-width: 85.75rem;
-            margin: 0 auto;
-            padding: 1.5rem 1.5rem 0;
+            padding: 1.5rem;
+            border: black solid;
         }
 
-        .mainDetail_mainDetailWrapper__2lnpU {
+        .mainDetail {
 
             display: grid;
             grid-area: maindetail;
@@ -28,13 +26,13 @@
             grid-row-gap: 1rem;
         }
 
-        .mainDetail_mainDetailWrapper__2lnpU:first-child {
+        .mainDetail:first-child {
             grid-column-start: 2;
             grid-column-end: 10;
             grid-template-columns: repeat(8, 1fr);
         }
 
-        .mainDetail_mainDetailList__1VnbY {
+        .mainDetailList {
             display: grid;
             grid-gap: 1rem;
             grid-auto-rows: -webkit-min-content;
@@ -43,29 +41,56 @@
             text-transform: capitalize;
         }
 
-        .unorderedList_ulStyle__18-lg {
+        .ulStyle {
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
-        li {
-            display: list-item;
-            text-align: -webkit-match-parent;
+        li > a {
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+            font-size: 1.0625rem;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 400;
+            line-height: 1.1764705882;
+                
         }
 
-        .promoBlock_promoWrapper__2YPxp {
+        .promoBlock {
             display: grid;
-            grid-area: promoblock;
-            grid-auto-rows: -webkit-min-content;
-            grid-auto-rows: min-content;
-            grid-template-columns: 1fr;
             grid-column: span 3;
             max-width: 100%;
             padding: 0;
+            text-decoration: none;
+            color: inherit;
         }
 
-        .activityBar_activityBarWrapper__2O9FT {
+        .promoheading{
+            font-size: 1.5rem;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.1666666667;
+            margin: 0.5rem 0 0;
+            max-width: 18.75rem;
+            font-weight: 600;
+        }
+
+        .promotext {
+            margin: 0.25rem 0 0;
+            max-width: 18.75rem;
+            font-size: 1.0625rem;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 400;
+            line-height: 1.1764705882;
+        }
+        
+        .promoBlockText{
+            font-weight: 600;
+            margin: 0.5rem 0 0;
+        }
+
+        .activityBarWrapper {
             background-color: #fafafa;
             display: grid;
             grid-area: activity;
@@ -75,11 +100,10 @@
             margin-bottom: 1.5rem;
         }
 
-        .activityBar_activityBarLabel__3XH5C {
-            font-size: .875rem;
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            font-weight: 400;
+
+        .activityBarLabel {
+            justify-content: flex-start;
+            font-size: 0.875rem;
             line-height: 1.4285714286;
             font-weight: 600;
             letter-spacing: .075rem;
@@ -94,51 +118,123 @@
             margin: 0.625rem 2.5rem 0.625rem 0;
         }
 
-        .activityBar_activityBarList__2fKDX {
+        .activityBarList {
             align-items: center;
             grid-column: span 9;
             display: flex;
+            position: relative;
+        }
+        .activityBarList > li:not(:first-child) {
+            margin-left: 2.5rem;
+        }
+        .activityBarList > li.shopAllFeature {
+            margin-left: auto;
+        }
+
+        .title> a{
+            font-size: .875rem;
+            line-height: 1.4285714286;
+            letter-spacing: .075rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .shopAllFeature{
+            font-size: .875rem;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.4285714286;
+            font-weight: 600;
+            letter-spacing: .075rem;
+            text-transform: uppercase;
+        }
+       .arrowsvg img{
+            transform: translateX(0);
+            transition: transform .25s ease;
+            vertical-align: text-bottom;
+       }
+       .arrowsvg img {
+            margin-left: 0.5rem;
+            transform: translateX(0);
+            transition: transform .25s ease, filter .25s ease;
+            vertical-align: text-bottom;
+            filter: brightness(0) saturate(100%) invert(32%) sepia(100%) saturate(2450%) hue-rotate(354deg) brightness(78%) contrast(121%);
+        }
+
+        .title:hover img,
+        .shopAllFeature:hover img,
+        .promoBlock:hover .arrowsvg img{
+            transform: translateX(0.5rem);
+        }
+
+        * a:after{
+            display:block;
+            content: '';
+            border-bottom: solid 2.4px #C8102E;  
+            transform: scaleX(0);  
+            transition: transform 250ms ease-in-out;
+            transform-origin: left;
+        }
+        * a:not(.promoBlock):hover:after { 
+            transform: scaleX(1);
+            transform-origin: left;
+        } 
+        .title a:after,
+        .shopAllFeature a:after {
+            border-bottom: none; 
         }
     </style>
 </head>
 <body>
-    <div class="detailed_detailNavIner__1r3z6">
-        <div class="mainDetail_mainDetailWrapper__2lnpU" role="menuitem" tabindex="-1">
-            <ul data-testid="account-menu-ul" class="unorderedList_ulStyle__18-lg mainDetail_mainDetailList__1VnbY">
-                <li><a href="/c/shoes/_/N-8tj" class="mainDetail_l2__kKiRi">Shoes by Gender</a></li>
-                <li><a href="/c/shoes/_/N-1z0xcuuZ8tj" class="mainDetail_l3__RbR_3">Women's Shoes</a></li>
-                <li><a href="/c/shoes/_/N-1z0xcmkZ8tj" class="mainDetail_l3__RbR_3">Men's Shoes</a></li>
+    <div class="detailNav">
+        <div class="mainDetail" role="menuitem" tabindex="-1">
+            <ul data-testid="account-menu-ul" class="ulStyle mainDetailList">
+                <li class="title"><a href="#">Shoes by Gender</a>
+                    <span class="arrowsvg">
+                    <img src="images/arrowred.svg" alt="arrowimg">
+                    </span>
+                </li>
+                <li><a href="#" >Women's Shoes</a></li>
+                <li><a href="#" >Men's Shoes</a></li>
             </ul>
-            <ul data-testid="account-menu-ul" class="unorderedList_ulStyle__18-lg mainDetail_mainDetailList__1VnbY">
-                <li><a href="/c/shoes/_/N-8tj" class="mainDetail_l2__kKiRi">Shoe Types</a></li>
-                <li><a href="/c/shoes/_/N-1z0q6v3Z8tj" class="mainDetail_l3__RbR_3">Cross Training Shoes</a></li>
-                <li><a href="/c/shoes/running/_/N-8tjZ1z13zha" class="mainDetail_l3__RbR_3">Running Shoes</a></li>
-                <li><a href="/c/shoes/_/N-1z0q6v4Z8tj" class="mainDetail_l3__RbR_3">Slides</a></li>
-                <li><a href="/c/shoes/_/N-1z0ntr5Z8tj" class="mainDetail_l3__RbR_3">Sneakers</a></li>
-                <li><a href="/c/shoes/_/N-1z0pt7rZ8tj" class="mainDetail_l3__RbR_3">Trail Running Shoes</a></li>
-                <li><a href="/c/shoes/workout/_/N-8tjZ1z0xhwe" class="mainDetail_l3__RbR_3">Workout Shoes</a></li>
+            <ul data-testid="account-menu-ul" class="ulStyle mainDetailList">
+                <li class="title"><a href="#">Shoe Types</a>
+                    <span class="arrowsvg">
+                        <img src="images/arrowred.svg" alt="arrowimg">
+                    </span>
+                </li>
+                <li><a href="#" >Cross Training Shoes</a></li>
+                <li><a href="#" >Running Shoes</a></li>
+                <li><a href="#" >Slides</a></li>
+                <li><a href="#" >Sneakers</a></li>
+                <li><a href="#" >Trail Running Shoes</a></li>
+                <li><a href="#" >Workout Shoes</a></li>
             </ul>
         </div>
-        <a href="/c/shoes/_/N-8tj?icid=cdp-navigation;1;meganavpromoblock;cdp:shoes;weeklies;womens" class="promoBlock_promoWrapper__2YPxp">
-            <div class="promoBlock_promoImageContainer__1PATl">
+        <a href="#?icid=cdp-navigation;1;meganavpromoblock;cdp:shoes;weeklies;womens" class="promoBlock">
+            <div class="promoImageContainer">
                 <picture>
-                    <source srcset="https://images.lululemon.com/is/image/lululemon/na_May24_wk4_W_OTM_MegaNavPromo_Shoes?$promoBlock$&amp;wid=320&amp;fmt=webp" type="image/webp">
-                    <source srcset="https://images.lululemon.com/is/image/lululemon/na_May24_wk4_W_OTM_MegaNavPromo_Shoes?$promoBlock$&amp;wid=320&amp;fmt=jpeg" type="image/jpeg">
                     <img src="https://images.lululemon.com/is/image/lululemon/na_May24_wk4_W_OTM_MegaNavPromo_Shoes?$promoBlock$&amp;wid=320&amp;fmt=jpeg" alt="Image. Close-up shot of a person wearing cityverse sneakers.">
                 </picture>
             </div>
-            <p class="promoBlock_promoHeadline__34Cj3">Step summer up.</p>
-            <p class="promoBlock_promoBodyText__3QiX-">Pack more in when out—cityverse sneakers come with custom cushioning and support.</p>
-            <p class="promoBlock_promoCTAText__2hAkE">Shop Shoes</p>
+            <p class="promoheading">Step summer up.</p>
+            <p class="promotext">Pack more in when out—cityverse sneakers come with custom cushioning and support.</p>
+            <p class="promoBlockText">Shop Shoes
+                <span class="arrowsvg">
+                <img src="images/arrowred.svg" alt="arrowimg">
+                </span>
+            </p>
         </a>
-        <div class="activityBar_activityBarWrapper__2O9FT" role="menu">
-            <p class="activityBar_activityBarLabel__3XH5C">Activity</p>
-            <ul data-testid="account-menu-ul" class="unorderedList_ulStyle__18-lg activityBar_activityBarList__2fKDX">
-                <li><a href="/c/shoes/running/_/N-8tjZ1z13zha">Running</a></li>
-                <li><a href="/c/shoes/workout/_/N-8tjZ1z0xhwe">Workout</a></li>
-                <li><a href="/c/shoes/casual/_/N-8tjZ1z0xms0">Casual</a></li>
-                <li><a href="/c/shoes/hiking/_/N-8tjZ1z0xotq">Hiking</a></li>
-                <li class="activityBar_shopAllFeature__I-Y_5"><a href="/c/shoes/_/N-8tj" class="activityBar_navItemShopAll__1-nFm">SHOP ALL SHOES</a></li>
+        <div class="activityBarWrapper" role="menu">
+            <p class="activityBarLabel">Activity</p>
+            <ul data-testid="account-menu-ul" class="ulStyle activityBarList">
+                <li><a href="#">Running</a></li>
+                <li><a href="#">Workout</a></li>
+                <li><a href="#">Casual</a></li>
+                <li><a href="#">Hiking</a></li>
+                <li class="shopAllFeature"><a href="#" class="navItemShopAll">SHOP ALL SHOES</a>
+                    <span class="arrowsvg">
+                        <img src="images/arrowred.svg" alt="arrowimg">
+                    </span>
+                </li>
             </ul>
         </div>
     </div>
