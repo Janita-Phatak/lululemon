@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .detailNav {
+        *{
+            font-family: Calibre,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+        }
+        .detailNav2 {
             display: grid;
             grid-template-areas:
                 "features maindetail promoblock"
@@ -125,7 +128,7 @@
             position: relative;
         }
         .activityBarList > li:not(:first-child) {
-            margin-left: 2.5rem;
+            margin-left: 5.25rem;
         }
         .activityBarList > li.shopAllFeature {
             margin-left: auto;
@@ -181,12 +184,27 @@
         .shopAllFeature a:after {
             border-bottom: none; 
         }
+        .list3{
+            display: grid;
+            grid-gap: 1rem;
+            grid-auto-rows: min-content;
+            grid-column: span 2;
+            text-transform: capitalize;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .list3 li{
+            color: #000;
+            font-size: 16px;
+            line-height: 1.2;
+        }
     </style>
 </head>
 <body>
-    <div class="detailNav">
+    <div class="detailNav3">
         <div class="mainDetail" role="menuitem" tabindex="-1">
-            <ul class="ulStyle mainDetailList">
+            <ul class="ulStyle mainDetailList line">
             <li><a href="#">What's New</a></li>
             <li><a href="#">Bestsellers</a></li>
             <li><a href="#">Align Shop</a></li>
@@ -214,10 +232,35 @@
                 <li><a href="#">Leggings</a></li>
                 <li><a href="#">Long Sleeve Shirts</a></li>
             </ul>
+            <ul class="list3">
+                <li><p></p></li>
+
                 <li><a href="#">Pants</a></li>
                 <li><a href="#">Polo Shirts</a></li>
-                <li><a href="#">Pants</a></li>
-                <li><a href="#">Polo Shirts</a></li>
+                <li><a href="#">Shirts</a></li>
+                <li><a href="#">Shoes</a></li>
+                <li><a href="#">Skirts</a></li>
+                <li><a href="#">Sports Bra</a></li>
+                <li><a href="#">T-Shirts</a></li>
+                <li><a href="#">Ten Tops</a></li>
+                <li><a href="#">Underwear</a></li>
+            </ul>
+            <ul class="ulStyle mainDetailList">
+                <li class="title"><a href="#">ACCESSORIES</a>
+                    <span class="arrowsvg">
+                        <img src="images/arrowred.svg" alt="arrowimg">
+                    </span>
+                </li>
+                <li><a href="#">Backpacks</a></li>
+                <li><a href="#">Bags</a></li>
+                <li><href="#">Belt Bags</a></li>
+                <li><a href="#">Crossbody Bags</a></li>
+                <li><a href="#">Hair Accessories</a></li>
+                <li><a href="#">Hats</a></li>
+                <li><a href="#">Socks</a></li>
+                <li><a href="#">Water Bottles</a></li>
+                <li><a href="#">Yoga Mats</a></li>
+            </ul>  
         </div>
 
         <a href="#?icid=cdp-navigation;1;meganavpromoblock;cdp:shoes;weeklies;womens" class="promoBlock">
@@ -227,9 +270,9 @@
                     alt="Image. A person is wearing the Inner Glow Short.">
                 </picture>
             </div>
-            <p class="promoheading">Step summer up.</p>
-            <p class="promotext">Pack more in when out—cityverse sneakers come with custom cushioning and support.</p>
-            <p class="promoBlockText">Shop Shoes
+            <p class="promoheading">Shorts on. Limits off.</p>
+            <p class="promotext">When non-stop comfort meets athletic performance, everything goes.</p>
+            <p class="promoBlockText">Shop Shorts
                 <span class="arrowsvg">
                 <img src="images/arrowred.svg" alt="arrowimg">
                 </span>

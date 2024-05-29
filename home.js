@@ -108,46 +108,56 @@ var swiper = new Swiper(".slide-content", {
   //     },
   // },
 });
-
 document.addEventListener('DOMContentLoaded', function() {
-  // Hide the detailNav by default
+  // Hide the detailNavs by default
   const detailNav = document.querySelector('.detailNav');
+  const detailNav2 = document.querySelector('.detailNav2');
+  const detailNav3 = document.querySelector('.detailNav3');
+  const detailNav4 = document.querySelector('.detailNav4');
+  const detailNav5 = document.querySelector('.detailNav5');
   detailNav.style.display = 'none';
+  detailNav2.style.display = 'none';
+  detailNav3.style.display = 'none';
+  detailNav4.style.display = 'none';
+  detailNav5.style.display = 'none';
 
   // Get all menu items
   const menuItems = document.querySelectorAll('.menu ul li');
 
-  // Get the Shoes menu item
+  // Get the specific menu items
   const shoesMenuItem = document.querySelector('.menu ul li:nth-child(4)');
+  const shoesMenuItem2 = document.querySelector('.menu ul li:nth-child(1)');
+  const shoesMenuItem3 = document.querySelector('.menu ul li:nth-child(2)');
+  const shoesMenuItem4 = document.querySelector('.menu ul li:nth-child(3)');
+  const shoesMenuItem5 = document.querySelector('.menu ul li:nth-child(6)');
 
-  // Flag to track if the detailNav or Shoes menu item is being hovered
+  // Flags to track if the detailNavs or menu items are being hovered
   let isDetailNavHovered = false;
   let isShoesMenuItemHovered = false;
+  let isShoesMenuItem2Hovered = false;
+  let isShoesMenuItem3Hovered = false;
+  let isShoesMenuItem4Hovered = false;
+  let isShoesMenuItem5Hovered = false;
 
-  // Add event listeners to show/hide the detailNav
+  // Add event listeners to show/hide the detailNav for the Shoes menu item
   shoesMenuItem.addEventListener('mouseenter', function() {
-      // Show the detailNav when hovering over the Shoes menu item
       detailNav.style.display = 'grid';
       isShoesMenuItemHovered = true;
   });
 
   shoesMenuItem.addEventListener('mouseleave', function(event) {
-      // Check if the mouse is moving into the detailNav
       if (!detailNav.contains(event.relatedTarget)) {
           detailNav.style.display = 'none';
           isShoesMenuItemHovered = false;
       }
   });
 
-  // Add event listener to detailNav to set isDetailNavHovered flag
   detailNav.addEventListener('mouseenter', function() {
       isDetailNavHovered = true;
       detailNav.style.display = 'grid';
   });
 
-  // Add event listener to detailNav to reset isDetailNavHovered flag and hide detailNav if mouse leaves
   detailNav.addEventListener('mouseleave', function(event) {
-      // Check if the mouse is moving into the Shoes menu item
       if (!shoesMenuItem.contains(event.relatedTarget)) {
           isDetailNavHovered = false;
           detailNav.style.display = 'none';
@@ -155,13 +165,140 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 
-  // Add event listeners to hide the detailNav when hovering over other menu items
+  // Add event listeners to show/hide the detailNav2 for the first menu item
+  shoesMenuItem2.addEventListener('mouseenter', function() {
+      detailNav2.style.display = 'grid';
+      isShoesMenuItem2Hovered = true;
+  });
+
+  shoesMenuItem2.addEventListener('mouseleave', function(event) {
+      if (!detailNav2.contains(event.relatedTarget)) {
+          detailNav2.style.display = 'none';
+          isShoesMenuItem2Hovered = false;
+      }
+  });
+
+  detailNav2.addEventListener('mouseenter', function() {
+      isDetailNavHovered = true;
+      detailNav2.style.display = 'grid';
+  });
+
+  detailNav2.addEventListener('mouseleave', function(event) {
+      if (!shoesMenuItem2.contains(event.relatedTarget)) {
+          isDetailNavHovered = false;
+          detailNav2.style.display = 'none';
+          isShoesMenuItem2Hovered = false;
+      }
+  });
+
+  // Add event listeners to show/hide the detailNav3 for the second menu item
+  shoesMenuItem3.addEventListener('mouseenter', function() {
+      detailNav3.style.display = 'grid';
+      isShoesMenuItem3Hovered = true;
+  });
+
+  shoesMenuItem3.addEventListener('mouseleave', function(event) {
+      if (!detailNav3.contains(event.relatedTarget)) {
+          detailNav3.style.display = 'none';
+          isShoesMenuItem3Hovered = false;
+      }
+  });
+
+  detailNav3.addEventListener('mouseenter', function() {
+      isDetailNavHovered = true;
+      detailNav3.style.display = 'grid';
+  });
+
+  detailNav3.addEventListener('mouseleave', function(event) {
+      if (!shoesMenuItem3.contains(event.relatedTarget)) {
+          isDetailNavHovered = false;
+          detailNav3.style.display = 'none';
+          isShoesMenuItem3Hovered = false;
+      }
+  });
+
+  // Add event listeners to show/hide the detailNav4 for the third menu item
+  shoesMenuItem4.addEventListener('mouseenter', function() {
+      detailNav4.style.display = 'grid';
+      isShoesMenuItem4Hovered = true;
+  });
+
+  shoesMenuItem4.addEventListener('mouseleave', function(event) {
+      if (!detailNav4.contains(event.relatedTarget)) {
+          detailNav4.style.display = 'none';
+          isShoesMenuItem4Hovered = false;
+      }
+  });
+
+  detailNav4.addEventListener('mouseenter', function() {
+      isDetailNavHovered = true;
+      detailNav4.style.display = 'grid';
+  });
+
+  detailNav4.addEventListener('mouseleave', function(event) {
+      if (!shoesMenuItem4.contains(event.relatedTarget)) {
+          isDetailNavHovered = false;
+          detailNav4.style.display = 'none';
+          isShoesMenuItem4Hovered = false;
+      }
+  });
+
+  // Add event listeners to show/hide the detailNav5 for the sixth menu item
+  shoesMenuItem5.addEventListener('mouseenter', function() {
+      detailNav5.style.display = 'grid';
+      isShoesMenuItem5Hovered = true;
+  });
+
+  shoesMenuItem5.addEventListener('mouseleave', function(event) {
+      if (!detailNav5.contains(event.relatedTarget)) {
+          detailNav5.style.display = 'none';
+          isShoesMenuItem5Hovered = false;
+      }
+  });
+
+  detailNav5.addEventListener('mouseenter', function() {
+      isDetailNavHovered = true;
+      detailNav5.style.display = 'grid';
+  });
+
+  detailNav5.addEventListener('mouseleave', function(event) {
+      if (!shoesMenuItem5.contains(event.relatedTarget)) {
+          isDetailNavHovered = false;
+          detailNav5.style.display = 'none';
+          isShoesMenuItem5Hovered = false;
+      }
+  });
+
+  // Add event listeners to hide the detailNavs when hovering over other menu items
   menuItems.forEach(function(menuItem) {
       if (menuItem !== shoesMenuItem) {
           menuItem.addEventListener('mouseenter', function() {
-              // Hide the detailNav when hovering over other menu items
               detailNav.style.display = 'none';
               isShoesMenuItemHovered = false;
+          });
+      }
+      if (menuItem !== shoesMenuItem2) {
+          menuItem.addEventListener('mouseenter', function() {
+              detailNav2.style.display = 'none';
+              isShoesMenuItem2Hovered = false;
+          });
+      }
+      if (menuItem !== shoesMenuItem3) {
+          menuItem.addEventListener('mouseenter', function() {
+              detailNav3.style.display = 'none';
+              isShoesMenuItem3Hovered = false;
+          });
+      }
+      if (menuItem !== shoesMenuItem4) {
+          menuItem.addEventListener('mouseenter', function() {
+              detailNav4.style.display = 'none';
+              isShoesMenuItem4Hovered = false;
+          });
+      }
+      if (menuItem !== shoesMenuItem5) {
+          menuItem.addEventListener('mouseenter', function() {
+              detailNav5.style.display = 'none';
+              isShoesMenuItem5Hovered = false;
           });
       }
   });

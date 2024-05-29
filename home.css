@@ -1062,7 +1062,7 @@ picture img{
     transform: translateX(0.5rem);
 }
 
-* a:after{
+* a:not(.socialMediaIcons):after{
     display:block;
     content: '';
     border-bottom: solid 2.4px #C8102E;  
@@ -1077,6 +1077,57 @@ picture img{
 .title a:after,
 .shopAllFeature a:after {
     border-bottom: none; 
+}
+.detailNav2,.detailNav3, .detailNav4 , .detailNav5{
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    width: 100%;
+    position: fixed;
+    z-index:4;
+    background-color: white;
+    padding-top:130px;
+    margin-top:20px;
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+    display: grid;
+    grid-template-areas:
+        "features maindetail promoblock"
+        "activity activity activity";
+    grid-template-columns: 0 repeat(11, 1fr) 0;
+    grid-template-rows: auto auto;
+    row-gap: 2rem;
+    padding-left: 6.5rem;
+    padding-right: 0.3rem;
+    margin-bottom: 0;
+    
+    /* border: black solid; */
+}
+.list3{
+    display: grid;
+    grid-gap: 1rem;
+    grid-auto-rows: min-content;
+    grid-column: span 2;
+    text-transform: capitalize;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+.list3 li{
+    color: #000;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.detailNav2 .line, .detailNav3 .line, .detailNav4  .line{
+    margin-right:50px;
+    border-right: 0.0125rem solid #d3d5d7;
+    /* margin-left: 4.75rem; */
+}
+
+.detailNav3 .activityBarList > li:not(:first-child) {
+    margin-left: 4.75rem;
+}
+.detailNav4 .activityBarList > li:not(:first-child) {
+    margin-left: 3.75rem;
 }
 
 .footer{
@@ -1263,6 +1314,7 @@ picture img{
 
 .socialMediaIcons img:hover {
     filter: invert(60%) sepia(10%) saturate(200%) hue-rotate(180deg);
+    
 }
 
 
@@ -1348,9 +1400,11 @@ picture img{
 }
 .swiper-button-next{
   right: 50px;
+  top: 205px;
 }
 .swiper-button-prev{
   left: 50px;
+  top: 205px;
 }
 .swiper-pagination-bullet{
   background-color: #6E93f7;
