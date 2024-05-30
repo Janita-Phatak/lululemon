@@ -866,6 +866,8 @@ p {
     gap:18.500px;
     margin: 0;
     padding: 0;
+
+    
 }
 
 .productinfo{
@@ -1343,7 +1345,7 @@ picture img{
   margin: 0 25px;
   overflow: hidden;
 }
-.card{
+/* .card{
  width: 330px;
  display: flex;
  gap: 18.5px;
@@ -1351,12 +1353,13 @@ picture img{
  margin-right: 25px;
  flex-direction: column;
  margin-bottom: 50px;
-}
+} */
 .image-content,
 .card-content{
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  padding: 10px;
 }
 .image-content{
   position: relative;

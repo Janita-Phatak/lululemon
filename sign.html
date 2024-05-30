@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +7,628 @@
         body {
             font-family: Calibre, Verlag, Helvetica, sans-serif;
         }
+        
+
+        header{
+            background-color: white;
+            margin: 0;
+            
+        }
+        #InnerBanner{
+            margin: 0 2.25rem;
+            font-size: 0.875rem;
+            font-weight: 200;
+            font-style: normal;
+            line-height: 1.25rem;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0 8px 0px;
+        }
+        #InnerBannerPromo{
+            justify-content: center;
+            margin: 0 2.25rem;
+        }
+
+        #InnerBannerPromo p{
+            padding-left: 4px;
+            margin: 0;
+            line-height: 1.2rem;
+            color:rgba(0, 0, 0, 1);
+            font-family: 'Roboto';
+            text-align:left;
+            font-size: 12.140625px;
+            letter-spacing:0;
+        }
+        #InnerBannerPromo a{
+            cursor: pointer;
+            color: #000;
+            text-decoration: none;
+            display: inline-block;
+        }
+        #InnerBannerPromo a:after {
+            content: "";
+            background: #53565a;
+            display: block;
+            height: 0.0625rem; 
+        }
+        #InnerBannerPromo a:hover:after { 
+            background: #C8102E;
+            transition: .5s ease-in-out; 
+        }
+        .button_clear{
+            overflow:hidden;
+            border: none;
+            background: none;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: absolute;
+            height: 2.25rem;
+            right: 0;
+            top: 0;
+            width: 2.25rem;
+        }
+        .button_clear img{
+            margin: auto;
+            height: 1rem;
+            width: 1rem;
+            color: rgba(0, 0, 0, 1);
+        }
+        #top-nav{
+            position: absolute;
+            right: 0;
+            left: 0;
+            background-color: white;
+            z-index: 10;
+        }
+        #options{
+            align-items: center;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0 auto;
+            height: 3rem;
+            background-color:rgba(250.00000029802322, 250.00000029802322, 250.00000029802322, 1);
+        }
+
+        .iconWrapperButton{
+            align-items: center;
+            display: flex;
+            position: relative;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1.42857;
+            margin-right: 24px;
+        }
+        .optionicon{
+            height: 1rem;
+            width: 1rem;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+        .iconComponents_underline{
+            position: relative;
+            font-size:12.359375px;
+            color:rgba(0, 0, 0, 1);
+            text-align:center;
+            font-size:12.359375px;
+            letter-spacing:0;
+        }
+        .iconComponents_underline:hover:after {
+            content: "";
+            height: 2px;
+            inset: auto 100% -0.3125rem 0px;
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        .iconComponents_underline::after {
+            display: block;
+            content: '';
+            border-bottom: solid 2.5px #C8102E;  
+            transform: scaleX(0);  
+            transition: transform 250ms ease-in-out;
+            transform-origin: left;
+        }
+
+        .iconWrapperacnchor{
+            position: relative;
+            margin-right: 1.5rem;
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1.42857;
+            align-items: center;
+            display: flex;
+            position: relative;
+            text-decoration: none;
+        }
+        .menu{
+            position: relative;
+            display: inline;
+            right: 0;
+            left: 0;
+            display: grid;
+            grid-template-areas: "logo primary secondary";
+            grid-template-columns: 5.375rem auto 1fr;
+            grid-template-rows: 4.75rem minmax(0,auto);
+            align-items: center;
+            margin: 0 auto;
+            padding: 0 25px;
+            background-color: white;
+            z-index: 10;
+        }
+        #logo{
+            display: flex;
+            grid-area: logo;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        #logo a{
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 1.2;
+        }
+        .hidden-visually{
+            border: 0!important;
+            clip: rect(0.0625rem,0.0625rem,0.0625rem,0.0625rem)!important;
+            -webkit-clip-path: inset(50%)!important;
+            clip-path: inset(50%)!important;
+            height: 0.0625rem!important;
+            margin: -0.0625rem!important;
+            overflow: hidden!important;
+            padding: 0!important;
+            position: absolute!important;
+            white-space: nowrap!important;
+            width: 0.0625rem!important;
+        }
+        .menu ul{
+            grid-area: primary;
+            position: relative;
+            transition: color .1s linear;
+            margin-left: -1.25rem;
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        .menu ul li a{
+            padding: 0.3125rem 1.25rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+            cursor: pointer;
+            text-align:left;
+            letter-spacing: .075rem;
+            line-height: 1.25rem;
+            font-size: 0.838rem;
+            font-style: normal;
+            align-content: center;
+        }
+        .menu ul li:last-child a{
+            color: #c8102e;
+        }
+        .menu ul li a:hover:after {
+            content: "";
+            display: block;
+            height: 4px;
+            inset: auto 100% -0.3125rem 0px;
+        }
+        .menu ul li a::after {
+            background: #C8102E;
+            width: 25px;
+            display:block;
+            content: '';
+            /* border-bottom: solid 0.2px #C8102E;   */
+            transform: scaleX(0);  
+            transition: transform 250ms ease-in-out;
+            transform-origin: left;
+            content: "";
+            bottom: 0.3125rem;
+            top: auto;
+            left: 0;
+            background: #c8102e;
+        }
+        .menu ul li a:hover:after { 
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        #secondnav{
+            display: block;
+            grid-area: secondary;
+            height: 100%;
+            padding: 1.125rem 0;
+        }
+
+        #secondnav ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+            display: flex;
+            height: 100%;
+            justify-content: flex-end;
+            position: relative;
+        }
+
+        .search{
+            z-index: auto;
+            margin-right: 1.375rem;
+            position: relative;
+        }
+        .search form{
+            z-index: 2;
+            margin: 0;
+            position: relative;
+            color: #000;
+            font-size: 16px;
+            line-height: 1.2;   
+        }
+        .search form img{
+            z-index: 2;
+            cursor: pointer;
+            position: absolute;
+            fill: #53565a;
+            color: #000;
+            top: 1.125rem;
+            left: 0.75rem;
+        }
+        .search form input{
+            color: #53565a;
+            height: 3.125rem;
+            border-radius: 0.25rem;
+            padding: 0 2rem 0 2.5rem;
+            background: #fff;
+            cursor: pointer;
+            box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+            border: 2px solid #000;
+            margin: 0;
+            min-width: 264px;
+            position: relative;
+            color: rgba(0, 0, 0, 1);
+            cursor: text;
+        }
+        .sign-in_profile{
+            margin-top: -0.0625rem;
+            position: relative;
+            margin-left: -2px;
+            padding-right: 0.625rem;
+        }
+        .anchoriconWrapper{
+            font-size: 0.875rem;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 400;
+            line-height: 1.42857;
+            text-decoration: none;
+            color: inherit;
+            align-items: center;
+            display: flex;
+            position: relative;
+        }
+        .iconComponents_icon{
+            height: 1.5rem;
+            width: 1.5rem;
+            cursor: pointer;
+            vertical-align: middle;
+            margin-left: 0.1875rem;
+            margin-right: 0.1875rem;
+        }
+        .wish{
+            padding: 14px;
+        }
+        .iconComponents_underline{
+            font-size: 0.875rem;
+            margin-left: 0.5rem;
+            position: relative;
+            font-weight: 400;
+            line-height: 1.42857;
+            color:rgba(0, 0, 0, 1);
+            text-align:left;
+            font-size:12.25px;
+            letter-spacing:0;
+        }
+
+        .secondary_cartIcon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .75rem;
+            font-weight: 500;
+            text-align: center;
+            color: #c8102e;
+            margin-left: 0.1875rem;
+            margin-right: 0.1875rem;
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+            
+        .secondary_cartIcon a{
+            line-height: 0;
+            padding: 0.625rem 0 0.625rem 0.625rem;
+            margin-bottom: 0.375rem;
+        }
+        .secondary_cartIcon img{
+            position:absolute;
+            left:3.25px;
+        }
+
+        #cart-total{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-align: center;
+            left: 0.3420rem;
+            top: 0.29875rem;
+            color: rgb(200, 16, 46);
+            line-height: 0;
+        }
+
+        .detailNav {
+            /* visibility: hidden; */
+            /* opacity: 0; */
+            width: 92%;
+            position: fixed;
+            z-index:4;
+            background-color: white;
+            padding-top:130px;
+            margin-top:20px;
+            box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+            display: grid;
+            grid-template-areas:
+                "features maindetail promoblock"
+                "activity activity activity";
+            grid-template-columns: 0 repeat(11, 1fr) 0;
+            grid-template-rows: auto auto;
+            row-gap: 2rem;
+            padding-left: 6.5rem;
+            padding-right: 0.3rem;
+            margin-bottom: 0;
+            
+            /* border: black solid; */
+        }
+        .menu ul:hover .detailNav {
+            display: grid;
+            /* visibility: visible;
+            opacity: 1; */
+        }
+
+
+        .mainDetail {
+
+            display: grid;
+            grid-area: maindetail;
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(6, 1fr);
+            grid-column: span 6;
+            grid-row-gap: 1rem;
+        }
+
+        .mainDetail:first-child {
+            grid-column-start: 2;
+            grid-column-end: 10;
+            grid-template-columns: repeat(8, 1fr);
+        }
+
+        .mainDetailList {
+            display: grid;
+            grid-gap: 1rem;
+            grid-auto-rows: -webkit-min-content;
+            grid-auto-rows: min-content;
+            grid-column: span 2;
+            text-transform: capitalize;
+        }
+
+        .ulStyle {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .ulStyle li > a {
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+            font-size: 1.0625rem;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 400;
+            line-height: 1.1764705882;
+                
+        }
+        picture img{
+            border-radius: 10px;
+        }
+        .promoBlock {
+            display: grid;
+            grid-column: span 3;
+            max-width: 100%;
+            padding: 0;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .promoheading{
+            font-size: 1.5rem;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.1666666667;
+            margin: 0.5rem 0 0;
+            max-width: 18.75rem;
+            font-weight: 600;
+        }
+
+        .promotext {
+            margin: 0.25rem 0 0;
+            max-width: 18.75rem;
+            font-size: 1.0625rem;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 400;
+            line-height: 1.1764705882;
+        }
+
+        .promoBlockText{
+            font-weight: 600;
+            margin: 0.5rem 0 0;
+        }
+
+        .activityBarWrapper {
+            background-color: #fafafa;
+            display: grid;
+            grid-area: activity;
+            grid-template-columns: 0 repeat(10, 1fr) 0;
+            grid-column: span 12;
+            height: 3.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+
+        .activityBarLabel {
+            justify-content: flex-start;
+            font-size: 0.875rem;
+            line-height: 1.4285714286;
+            font-weight: 600;
+            letter-spacing: .075rem;
+            text-transform: uppercase;
+            align-items: center;
+            border-right: 0.0625rem solid #d3d5d7;
+            color: #53565a;
+            display: flex;
+            grid-column-start: 2;
+            grid-column-end: 4;
+            justify-content: flex-start;
+            margin: 0.625rem 2.5rem 0.625rem 0;
+        }
+
+        .activityBarList {
+            align-items: center;
+            grid-column: span 9;
+            display: flex;
+            position: relative;
+        }
+        .activityBarList > li:not(:first-child) {
+            margin-left: 2.5rem;
+        }
+        .activityBarList > li.shopAllFeature {
+            margin-left: auto;
+            padding-right: 30px;
+        }
+
+        .title> a{
+            font-size: .875rem;
+            line-height: 1.4285714286;
+            letter-spacing: .075rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .shopAllFeature{
+            font-size: .875rem;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.4285714286;
+            font-weight: 600;
+            letter-spacing: .075rem;
+            text-transform: uppercase;
+        }
+
+        .arrowsvg img{
+            transform: translateX(0);
+            transition: transform .25s ease;
+            vertical-align: text-bottom;
+        }
+        .arrowsvg img {
+            margin-left: 0.5rem;
+            transform: translateX(0);
+            transition: transform .25s ease, filter .25s ease;
+            vertical-align: text-bottom;
+            filter: brightness(0) saturate(100%) invert(32%) sepia(100%) saturate(2450%) hue-rotate(354deg) brightness(78%) contrast(121%);
+        }
+
+        .title:hover img,
+        .shopAllFeature:hover img,
+        .promoBlock:hover .arrowsvg img{
+            transform: translateX(0.5rem);
+        }
+
+      .detailNav a:after, .detailNav2 a:after, .detailNav3 a:after, .detailNav4 a:after,.detailNav5 a:after {
+            display:block;
+            content: '';
+            border-bottom: solid 2.4px #C8102E;  
+            transform: scaleX(0);  
+            transition: transform 250ms ease-in-out;
+            transform-origin: left;
+        }
+        .detailNav a:hover:after, .detailNav2 a:hover:after, .detailNav3 a:hover:after, 
+        .detailNav4 a:hover:after,.detailNav5 a:hover:after,  a:not(.promoBlock):hover:after { 
+            transform: scaleX(1);
+            transform-origin: left;
+        } 
+
+        .title a:after,
+        .shopAllFeature a:after {
+            border-bottom: none; 
+        }
+        .detailNav2,.detailNav3, .detailNav4 , .detailNav5{
+            /* visibility: hidden; */
+            /* opacity: 0; */
+            position: fixed;
+            z-index:4;
+            background-color: white;
+            padding-top:130px;
+            margin-top:20px;
+            box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+            display: grid;
+            grid-template-areas:
+                "features maindetail promoblock"
+                "activity activity activity";
+            grid-template-columns: 0 repeat(11, 1fr) 0;
+            grid-template-rows: auto auto;
+            row-gap: 2rem;
+            padding-left: 6.5rem;
+            padding-right: 0.3rem;
+            margin-bottom: 0;
+            
+            /* border: black solid; */
+        }
+        .list3{
+            display: grid;
+            grid-gap: 1rem;
+            grid-auto-rows: min-content;
+            grid-column: span 2;
+            text-transform: capitalize;
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        .list3 li a{
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+            font-size: 1.0625rem;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 400;
+            line-height: 1.1764705882;
+        }
+
+        .detailNav2 .line, .detailNav3 .line, .detailNav4  .line{
+            margin-right:50px;
+            border-right: 0.0125rem solid #d3d5d7;
+            /* margin-left: 4.75rem; */
+        }
+
+        .detailNav3 .activityBarList > li:not(:first-child) {
+            margin-left: 4.75rem;
+        }
+        .detailNav4 .activityBarList > li:not(:first-child) {
+            margin-left: 3.75rem;
+        }
+
 
         #head {
             width: 100%;
@@ -22,15 +643,16 @@
             padding-bottom: 0;
             text-align: center;
             margin: auto;
-            font-size: 3.5625rem;
+            font-size: 3rem;
             line-height: .9824561404;
             font-weight: 600;
             display: block;
+            margin-top:150px;
         }
 
         .login_horizontalLine {
-            width: 100%;
-            margin: 2.25rem 0;
+            width: 80%;
+            margin: auto;
             display: block;
             border-bottom: 0.0625rem solid #d3d5d7;
 
@@ -169,6 +791,14 @@
             cursor: pointer;
             padding-bottom: 0.25rem
         }
+        .lll-link-primary:hover {
+            text-decoration-color: #C8102E;
+            text-decoration-thickness: 0.0925rem;
+            transform: scaleX(0);
+            transition: transform 250ms ease-in-out;
+            transform-origin: left;
+         
+        }
 
         .login_verticalDivider {
             border-right: 0.0625rem solid #e5e6e7;
@@ -250,8 +880,8 @@
             display: block;
             font-size: 1.125rem;
             height: 3.25rem;
-            padding: 0.875rem 1rem;
-            /* width: 100%; */
+            padding: 0 1rem;
+            margin: 0.2rem 2rem 0.2rem 0;
             /* max-width: 43.75rem; */
             width: -webkit-fill-available;
         }
@@ -323,7 +953,7 @@
             text-transform: uppercase;
             font-size: 1rem;
             font-weight: 600;
-            width: 100%;
+            width: 93%
         }
 
         .legalConsentMessage {
@@ -343,12 +973,14 @@
 
         .text-button {
             position: absolute;
-            right: 1rem;
+            right: 3rem;
             z-index: 1;
+            
         }
 
         .text-button svg {
             cursor: pointer;
+            padding:5px;
         }
 
         .tagWrapper-2SDIg {
@@ -376,9 +1008,212 @@
             height: .25rem;
             width: 1.8rem;
         }
+        .footer{
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            top: 8rem;
+            padding-top: 0.875rem;
+            padding: 0  0 0 25px
+        }
+        .footerMenu{
+            display: flex;
+            padding-left: 1.5625rem;
+            padding-right: 1.5625rem;
+            margin-top: 2.5rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            max-width: 85.75rem;
+            padding: 0;
+        }
+        .footerMenu ul{
+            padding: 1.5rem 0;
+            padding-left: 0;
+            color: #53565a;
+        }
+        .footerInnerSection{
+            padding: 1rem 0 0;
+            display: inline-block;
+            border: none;
+        }
+        .footerInnerSection ul{
+            list-style-type: none;
+            margin: 0;
+            line-height: 1.4285714286;
+            letter-spacing: .075rem;
+        }
+        .footerInnerSection li{
+            padding: 0.5rem 0;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.1764705882;
+            /* font-size: 1.0625rem; */
+            font-size: .875rem;
+            letter-spacing: .04rem;
+        }
+        .footerInnerSection span{
+            display: inline-block;
+            cursor: pointer;
+        }
+        .footerInnerSection span:after{
+            display:block;
+            content: '';
+            border-bottom: solid 2.4px #C8102E;  
+            transform: scaleX(0);  
+            transition: transform 250ms ease-in-out;
+            transform-origin: left;
+        }
+        .footerInnerSection span:hover:after { 
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        .subHeader {
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 1rem 0;
+            font-size: .875rem;
+            line-height: 1.4285714286;
+            letter-spacing: .075rem;
+        }
+        .subHeader:hover{
+            opacity: .8;
+        }
+
+        .subHeader2 {
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 1rem 0;
+            font-size: .875rem;
+            line-height: 1.4285714286;
+            letter-spacing: .075rem;
+        }
+        .footerInnerSection2{
+            display: inline-block;
+            border: none;
+        }
+        .footerInnerSection2 li{
+            padding: 0.5rem 0;
+            padding-bottom: 1rem;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+        }
+        .footerInnerSection2 ul{
+            list-style-type: none;
+            padding-top: 0;
+            margin: 0;
+            line-height: 1.4285714286;
+            letter-spacing: .075rem;
+            line-height: 1.1764705882;
+            /* font-size: 1.0625rem; */
+            font-size: .875rem;
+            letter-spacing: .04rem;
+        }
+        .footerInnerSection2 span{
+            display: inline-block;
+            cursor: pointer;
+        }
+        .footerInnerSection2 span:after{
+            display:block;
+            content: '';
+            border-bottom: solid 2.4px #C8102E;  
+            transform: scaleX(0);  
+            transition: transform 250ms ease-in-out;
+            transform-origin: left;
+        }
+        .footerInnerSection2 span:hover:after { 
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        .bottomFooter{
+            text-align: center;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 1.5625rem;
+            padding-right: 1.5625rem;
+            border-top: .0625rem solid #d3d5d7;
+            margin-left: auto;
+            margin-right: auto;
+            width: auto;
+            font-size: .875rem;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 400;
+            line-height: 1.4285714286;
+            color: #53565a;
+        }
+        .bottomFooter ul{
+            display: flex;
+            list-style-type: none;
+        }
+        .bottomFooter li{
+            display: flex;
+            list-style-type: none;
+            margin-right: 15px;
+            cursor: pointer;
+            display:inline-block;
+        }
+        .bottomFooter li:after{
+            display:block;
+            content: '';
+            border-bottom: solid 2.5px #C8102E;  
+            transform: scaleX(0);  
+            transition: transform 250ms ease-in-out;
+            transform-origin: left;
+        }
+        .bottomFooter li:hover:after { 
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        #privacyPolicy{
+            border-right: .0625rem solid #d3d5d7;
+            padding-right: 15px;
+        }
+        .socialMediaIcons{
+            transition: opacity .25s ease;
+            opacity: 1;
+            text-decoration: none;
+            /* color: inherit; */
+            /* display: inline-block; */
+            cursor: pointer;
+        }
+        .footerInnerSectionSocialMedia{
+            border-bottom: .0625rem solid #d3d5d7;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding-bottom: 1.5rem;
+            /* margin: 2rem 1rem 0; */
+        }
+        .socialMediaIcons img {
+            transition: filter 0.25s ease;
+        }
+
+        .socialMediaIcons img:hover {
+            filter: invert(60%) sepia(10%) saturate(200%) hue-rotate(180deg);
+            
+        }
+
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%
+        }
+
+        /* Hide the error message initially */
+        .hint {
+        display: none;
+        }
+
     </style>
 </head>
-<link rel="stylesheet" href="home.css">
+<!-- <link rel="stylesheet" href="home.css"> -->
 
 <body style="background-color: white;">
     <header>
@@ -386,15 +1221,14 @@
             <div id="InnerBannerPromo">
                 <p>
                     <span>
-                        Early access: the Two-Tone Canvas Tote is back. Members have first dibs before it’s gone
-                        (again).
+                        Early access: the Two-Tone Canvas Tote is back. Members have first dibs before it’s gone (again).
                     </span>
                     <span id="anchorHR">
                         <a href="#" class="anchor_anchor">Shop on the App</a>
                     </span>
                 </p>
             </div>
-
+            
             <button class="button_clear" type="button" onclick="removeDiv();">
                 <img src="images\cross.svg" alt="closeIcon">
             </button>
@@ -419,7 +1253,7 @@
                 </button>
 
                 <a href="#" class="iconWrapperacnchor">
-                    <img src="images\USA.svg" alt="region selector icon" class="optionicon">
+                    <img src="images\USA.svg" alt= "region selector icon" class="optionicon">
                     <span class="iconComponents_underline">USA</span>
                 </a>
             </div>
@@ -440,30 +1274,26 @@
                 </ul>
                 <div id="secondnav">
                     <ul>
-                        <div class="search">
+                        <div class = "search">
                             <form autocomplete="off" action="https://shop.lululemon.com/search">
-                                <img src="images\search.svg" alt="search_closeIcon" focusable="false" a-hidden="false"
-                                    title="Close">
-                                <input autocomplete="off" placeholder="Search" class="search_input" name="Ntt"
-                                    type="search" value="">
+                                <img src="images\search.svg" alt="search_closeIcon" focusable="false" a-hidden="false" title="Close">
+                                <input autocomplete="off" placeholder="Search" class="search_input" name="Ntt" type="search" value="">
                             </form>
                         </div>
                         <div class="sign-in_profile">
                             <a href="#" class="anchoriconWrapper">
-                                <img src="images\signin.svg" alt="sign in" class="iconComponents_icon"
-                                    focusable="false">
+                                <img src="images\signin.svg" alt ="sign in" class="iconComponents_icon" focusable="false">
                                 <title>account menu icon</title>
                                 <span class="iconComponents_underline">Sign In</span>
                             </a>
                         </div>
                         <a href="#" class="anchoriconWrapper">
-                            <img src="images\wishlist.svg" alt="whishlist" class="wish" focusable="false">
+                            <img src="images\wishlist.svg" alt ="whishlist"  class="wish" focusable="false">
                             <title>wish list icon</title>
                         </a>
                         <div class="secondary_cartIcon">
-                            <a href="#" class="anchoriconWrapper" title="0 items"
-                                aria-label="0 items in the bag, click to view the bag">
-                                <img src="images\cart.svg" alt="cart" focusable="false" class="iconComponents_icon">
+                            <a href="#" class="anchoriconWrapper" title="0 items" aria-label="0 items in the bag, click to view the bag" >
+                                <img src="images\cart.svg" alt ="cart" focusable="false" class="iconComponents_icon">
                                 <title>bagIcon</title>
                                 <span id="cart-total" class="shoppingCartCount">0</span>
                             </a>
@@ -473,8 +1303,362 @@
                 </div>
             </div>
         </div>
-
+  
     </header>
+    <div class="detailNav">
+        <div class="mainDetail" role="menuitem" tabindex="-1">
+            <ul data-testid="account-menu-ul" class="ulStyle mainDetailList">
+                <li class="title"><a href="#">Shoes by Gender</a>
+                    <span class="arrowsvg">
+                    <img src="images/arrowred.svg" alt="arrowimg">
+                    </span>
+                </li>
+                <li><a href="#" >Women's Shoes</a></li>
+                <li><a href="#" >Men's Shoes</a></li>
+            </ul>
+            <ul data-testid="account-menu-ul" class="ulStyle mainDetailList">
+                <li class="title"><a href="#">Shoe Types</a>
+                    <span class="arrowsvg">
+                        <img src="images/arrowred.svg" alt="arrowimg">
+                    </span>
+                </li>
+                <li><a href="#" >Cross Training Shoes</a></li>
+                <li><a href="#" >Running Shoes</a></li>
+                <li><a href="#" >Slides</a></li>
+                <li><a href="#" >Sneakers</a></li>
+                <li><a href="#" >Trail Running Shoes</a></li>
+                <li><a href="#" >Workout Shoes</a></li>
+            </ul>
+        </div>
+        <a href="#?icid=cdp-navigation;1;meganavpromoblock;cdp:shoes;weeklies;womens" class="promoBlock">
+            <div class="promoImageContainer">
+                <picture>
+                    <img src="https://images.lululemon.com/is/image/lululemon/na_May24_wk4_W_OTM_MegaNavPromo_Shoes?$promoBlock$&amp;wid=320&amp;fmt=jpeg" alt="Image. Close-up shot of a person wearing cityverse sneakers.">
+                </picture>
+            </div>
+            <p class="promoheading">Step summer up.</p>
+            <p class="promotext">Pack more in when out—cityverse sneakers come with custom cushioning and support.</p>
+            <p class="promoBlockText">Shop Shoes
+                <span class="arrowsvg">
+                <img src="images/arrowred.svg" alt="arrowimg">
+                </span>
+            </p>
+        </a>
+        <div class="activityBarWrapper" role="menu">
+            <p class="activityBarLabel">Activity</p>
+            <ul data-testid="account-menu-ul" class="ulStyle activityBarList">
+                <li><a href="#">Running</a></li>
+                <li><a href="#">Workout</a></li>
+                <li><a href="#">Casual</a></li>
+                <li><a href="#">Hiking</a></li>
+                <li class="shopAllFeature"><a href="#" class="navItemShopAll">SHOP ALL SHOES</a>
+                    <span class="arrowsvg">
+                        <img src="images/arrowred.svg" alt="arrowimg">
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="detailNav2">
+        <div class="mainDetail" role="menuitem" tabindex="-1">
+            <ul class="ulStyle mainDetailList line">
+            <li><a href="#">What's New</a></li>
+            <li><a href="#">Bestsellers</a></li>
+            <li><a href="#">Align Shop</a></li>
+            <li><a href="#">Travel Clothes</a></li>
+            <li><a href="#">Matching Sets</a></li>
+            <li><a href="#">Athletic Shorts</a></li>
+            <li><a href="#">Tennis and Golf Clothes</a></li>
+            <li><a href="#">Summer Clothes</a></li>
+            <li><a href="#">Plus Size Clothes</a></li>
+            <li><a href="#"> We Made Too Much</a></li>
+            </ul>
+            <ul class="ulStyle mainDetailList">
+                <li class="title"><a href="#">Women's Clothes</a>
+                    <span class="arrowsvg">
+                        <img src="images/arrowred.svg" alt="arrowimg">
+                    </span>
+                </li>
+                <li><a href="#">Shorts</a></li>
+                <li><a href="#">Bodysuits</a></li>
+                <li><href="#">Coats &amp; Jackets</a></li>
+                <li><a href="#">Dresses</a></li>
+                <li><a href="#">Hoodies &amp; Sweatshirts</a></li>
+                <li><a href="#">Joggers</a></li>
+                <li><a href="#">Jumpsuits &amp; Rompers</a></li>
+                <li><a href="#">Leggings</a></li>
+                <li><a href="#">Long Sleeve Shirts</a></li>
+            </ul>
+            <ul class="list3">
+                <li><p></p></li>
+                <li><a href="#">Pants</a></li>
+                <li><a href="#">Polo Shirts</a></li>
+                <li><a href="#">Shirts</a></li>
+                <li><a href="#">Shoes</a></li>
+                <li><a href="#">Skirts</a></li>
+                <li><a href="#">Sports Bra</a></li>
+                <li><a href="#">T-Shirts</a></li>
+                <li><a href="#">Ten Tops</a></li>
+                <li><a href="#">Underwear</a></li>
+            </ul>
+            <ul class="ulStyle mainDetailList">
+                <li class="title"><a href="#">ACCESSORIES</a>
+                    <span class="arrowsvg">
+                        <img src="images/arrowred.svg" alt="arrowimg">
+                    </span>
+                </li>
+                <li><a href="#">Backpacks</a></li>
+                <li><a href="#">Bags</a></li>
+                <li><href="#">Belt Bags</a></li>
+                <li><a href="#">Crossbody Bags</a></li>
+                <li><a href="#">Hair Accessories</a></li>
+                <li><a href="#">Hats</a></li>
+                <li><a href="#">Socks</a></li>
+                <li><a href="#">Water Bottles</a></li>
+                <li><a href="#">Yoga Mats</a></li>
+            </ul>  
+        </div>
+
+        <a href="#?icid=cdp-navigation;1;meganavpromoblock;cdp:shoes;weeklies;womens" class="promoBlock">
+            <div class="promoImageContainer">
+                <picture>
+                    <img src="https://images.lululemon.com/is/image/lululemon/na_May24_wk4_W_OTM_MegaNavPromo_Shorts?$promoBlock$&wid=320&fmt=jpeg"
+                    alt="Image. A person is wearing the Inner Glow Short.">
+                </picture>
+            </div>
+            <p class="promoheading">Shorts on. Limits off.</p>
+            <p class="promotext">When non-stop comfort meets athletic performance, everything goes.</p>
+            <p class="promoBlockText">Shop Shorts
+                <span class="arrowsvg">
+                <img src="images/arrowred.svg" alt="arrowimg">
+                </span>
+            </p>
+        </a>
+        <div class="activityBarWrapper" role="menu">
+            <p class="activityBarLabel">Activity</p>
+            <ul data-testid="account-menu-ul" class="ulStyle activityBarList">
+                <li><a href="#">Running</a></li>
+                <li><a href="#">Workout</a></li>
+                <li><a href="#">Casual</a></li>
+                <li><a href="#">Yoga</a></li>
+                <li><a href="#">Golf</a></li>
+                <li><a href="#">Tennis</a></li>
+                <li class="shopAllFeature"><a href="#" class="navItemShopAll">SHOP ALL SHOES</a>
+                    <span class="arrowsvg">
+                        <img src="images/arrowred.svg" alt="arrowimg">
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="detailNav3">
+        <div class="mainDetail" role="menuitem" tabindex="-1">
+            <ul class="ulStyle mainDetailList line">
+            <li><a href="#">What's New</a></li>
+            <li><a href="#">Bestsellers</a></li>
+            <li><a href="#">ABC Collectio</a></li>
+            <li><a href="#">Business Casual Clothes</a></li>
+            <li><a href="#">Father's Day Gifts</a></li>
+            <li><a href="#">Golf Clothes</a></li>
+            <li><a href="#">Travel Clothes</a></li>
+            <li><a href="#">Trending Shorts</a></li>
+            <li><a href="#">Summer Clothes</a></li>
+            <li><a href="#"> We Made Too Much</a></li>
+            </ul>
+            <ul class="ulStyle mainDetailList">
+                <li class="title"><a href="#">Men's Clothes</a>
+                    <span class="arrowsvg">
+                        <img src="images/arrowred.svg" alt="arrowimg">
+                    </span>
+                </li>
+                <li><a href="#">Shorts</a></li>
+                <li><a href="#">Button Down Shirts</a></li>
+                <li><href="#">Coats &amp; Jackets</a></li>
+                <li><a href="#">Half Zip Sweatshirts</a></li>
+                <li><a href="#">Hoodies &amp; Sweatshirts</a></li>
+                <li><a href="#">Joggers</a></li>
+                <li><a href="#">Long Sleeve Shirts</a></li>
+                <li><a href="#">Pants</a></li>
+                <li><a href="#">Polo Shirtss</a></li>
+            </ul>
+            <ul class="list3">
+                <li><p></p></li>
+                <li><a href="#">Shirts</a></li>
+                <li><a href="#">Shoes</a></li>
+                <li><a href="#">Socks</a></li>
+                <li><a href="#">Sweaters</a></li>
+                <li><a href="#">Swim Trunks</a></li>
+                <li><a href="#">Tank Tops</a></li>
+                <li><a href="#">Trousers</a></li>
+                <li><a href="#">T-Shirts</a></li>
+                <li><a href="#">Underwear</a></li>
+            </ul>
+            
+            <ul class="ulStyle mainDetailList">
+                <li class="title"><a href="#">ACCESSORIES</a>
+                    <span class="arrowsvg">
+                        <img src="images/arrowred.svg" alt="arrowimg">
+                    </span>
+                </li>
+                <li><a href="#">Backpacks</a></li>
+                <li><a href="#">Bags</a></li>
+                <li><href="#">Belt Bags</a></li>
+                <li><href="#">Caps</a></li>
+                <li><a href="#">Crossbody Bags</a></li>
+                <li><a href="#">Duffle Bags</a></li>
+                <li><a href="#">Hats</a></li>
+                <li><a href="#">Water Bottles</a></li>
+                <li><a href="#">Yoga Mats</a></li>
+            </ul>  
+        </div>
+        <a href="#?icid=cdp-navigation;1;meganavpromoblock;cdp:shoes;weeklies;womens" class="promoBlock">
+            <div class="promoImageContainer">
+                <picture>
+                    <img src="https://images.lululemon.com/is/image/lululemon/na_Jun24_wk1_M_Golf_MegaNavPromo_ABCPants?$promoBlock$&wid=320&fmt=jpeg"
+                    alt="Image. A person is wearing the Inner Glow Short.">
+                </picture>
+            </div>
+            <p class="promoheading">Your all-day long pant.</p>
+            <p class="promotext">Sweat-wicking, shape-holding styles take you to the 18th hole and beyond.</p>
+            <p class="promoBlockText">Shop ABC Collection
+                <span class="arrowsvg">
+                <img src="images/arrowred.svg" alt="arrowimg">
+                </span>
+            </p>
+        </a>
+        <div class="activityBarWrapper" role="menu">
+            <p class="activityBarLabel">Activity</p>
+            <ul data-testid="account-menu-ul" class="ulStyle activityBarList">
+                <li><a href="#">Golf</a></li>
+                <li><a href="#">Running</a></li>
+                <li><a href="#">Workout</a></li>
+                <li><a href="#">Casual</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Tennis</a></li>
+                <li class="shopAllFeature"><a href="#" class="navItemShopAll">SHOP ALL MEN</a>
+                    <span class="arrowsvg">
+                        <img src="images/arrowred.svg" alt="arrowimg">
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+     <div class="detailNav4">
+        <div class="mainDetail" role="menuitem" tabindex="-1">
+            <ul class="ulStyle mainDetailList line">
+            <li><a href="#">What's New</a></li>
+            <li><a href="#">Bestsellers</a></li>
+            <li><a href="#">Mini Bags</a></li>
+            <li><a href="#">Running Accessories</a></li>
+            <li><a href="#">Pink Accessories</a></li>
+            <li><a href="#">Everywhere Bag Shop</a></li>
+            <li><a href="#">Travel Accessories</a></li>
+            <li><a href="#">Summer Accessories</a></li>
+            <li><a href="#"> We Made Too Much</a></li>
+            </ul>
+            <ul class="ulStyle mainDetailList">
+                <li class="title"><a href="#">ACCESSORIES</a>
+                    <span class="arrowsvg">
+                        <img src="images/arrowred.svg" alt="arrowimg">
+                    </span>
+                </li>
+                <li><a href="#">Bags</a></li>
+                <li><a href="#">Bucket Hats</a></li>
+                <li><href="#">Caps</a></li>
+                <li><a href="#">Equipment</a></li>
+                <li><a href="#"> Gloves & Mittens</a></li>
+                <li><a href="#">Hair Accessories</a></li>
+                <li><a href="#">Hats</a></li>
+            </ul>        
+            <ul class="list3">
+                <li><p></p></li>
+                <li><a href="#">Headbands</a></li>
+                <li><a href="#">Keychains</a></li>
+                <li><a href="#">Men's Socks</a></li>
+                <li><a href="#">Scarves & Wraps</a></li>
+                <li><a href="#">Water Bottles</a></li>
+                <li><a href="#">Women's Socks</a></li>
+                <li><a href="#">Yoga Mats</a></li>
+            </ul>
+
+            <ul class="ulStyle mainDetailList">
+                <li class="title"><a href="#">BAGS</a>
+                    <span class="arrowsvg">
+                        <img src="images/arrowred.svg" alt="arrowimg">
+                    </span>
+                </li>
+                <li><a href="#">Backpacks</a></li>
+                <li><href="#">Caps</a></li>
+                <li><a href="#">Crossbody Bags</a></li>
+                <li><a href="#">Duffle Bags</a></li>
+                <li><a href="#">Totes</a></li>
+                <li><a href="#">Wallets &and; Pouches</a></li>
+                <li><a href="#">Yoga Mats</a></li>
+            </ul>  
+        </div>
+        <a href="#?icid=cdp-navigation;1;meganavpromoblock;cdp:shoes;weeklies;womens" class="promoBlock">
+            <div class="promoImageContainer">
+                <picture>
+                    <img src="https://images.lululemon.com/is/image/lululemon/NA_Jun24_Wk1_M_FathersDay_MegaNavPromo_Under50?$promoBlock$&wid=320&fmt=jpeg"
+                    alt="Image. A person is wearing the Inner Glow Short.">
+                </picture>
+            </div>
+            <p class="promoheading">Versatile gifts for do-it-all dads.</p>
+            <p class="promotext">Gear to balance out Dad’s day-to-day.</p>
+            <p class="promoBlockText">Shop Gifts Under $50
+                <span class="arrowsvg">
+                <img src="images/arrowred.svg" alt="arrowimg">
+                </span>
+            </p>                  
+        </a>
+        <div class="activityBarWrapper" role="menu">
+            <p class="activityBarLabel">Activity</p>
+            <ul data-testid="account-menu-ul" class="ulStyle activityBarList">
+                <li><a href="#">Yoga</a></li>
+                <li><a href="#">Running</a></li>
+                <li><a href="#">Workout</a></li>
+                <li><a href="#">Casual</a></li>
+                <li><a href="#">Travel</a></li>
+                <li><a href="#">Tennis</a></li>
+                <li class="shopAllFeature"><a href="#" class="navItemShopAll">SHOP ALL ACCESSORIES</a>
+                    <span class="arrowsvg">
+                        <img src="images/arrowred.svg" alt="arrowimg">
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="detailNav5">
+        <div class="mainDetail" role="menuitem" tabindex="-1">
+            <ul class="ulStyle mainDetailList line">
+            <li class="title"><a href="#">FATHER'S DAY GIFTS</a>
+                <span class="arrowsvg">
+                    <img src="images/arrowred.svg" alt="arrowimg">
+                </span>
+            </li>
+            <li><a href="#">Our Best Gift</a></li>
+            <li><a href="#">Gifts Under $50</a></li>
+            <li><a href="#">Gifts Under $100</a></li>
+            <li><a href="#">Golf Gifts</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            </ul>
+        </div>
+        <a href="#?icid=cdp-navigation;1;meganavpromoblock;cdp:shoes;weeklies;womens" class="promoBlock">
+            <div class="promoImageContainer">
+                <picture>
+                    <img src="https://images.lululemon.com/is/image/lululemon/NA_May24_Wk4_M_FathersDay_MegaNav_Skate?$promoBlock$&wid=320&fmt=jpeg"
+                    alt="Image. A person is wearing the Inner Glow Short.">
+                </picture>
+            </div>
+            <p class="promoheading">Versatile gifts for do-it-all dads.</p>
+            <p class="promotext">Gear to balance out Dad’s day-to-day.</p>
+            <p class="promoBlockText">Shop Gifts Under $50
+                <span class="arrowsvg">
+                <img src="images/arrowred.svg" alt="arrowimg">
+                </span>
+            </p>                  
+        </a>
+    </div> 
     <div id="head">
         <div class="loginheader">
             Wellbeing made easier.
@@ -603,9 +1787,6 @@
             </div>
         </div>
         <div class="login_verticalDivider"></div>
-        <form>
-
-        </form>
         <div class="login_formGrid">
             <div class="login_cellPerks">
                 <div class="collapsible-container_buttonHidden">
@@ -615,86 +1796,50 @@
                 </div>
                 <div class="login-fields_loginField">
                     <label class="label-27Swm topmargin" for="username" id="username-label">Email address </label>
-                    <div>
-
-                    </div>
-                    <input aria-labelledby="username-label" id="username" name="username" aria-disabled="false"
-                        required="" autocomplete="on" class="input-2-hFT inputError-GQPIE" aria-invalid="true"
-                        type="email" value="" aria-describedby="username-hint">
-
-                    <div class="iconContainer-3l9gt iconError-VnY5J">
-                        <svg class="text-button" style="margin-top: -37.5px;" height="22" width="22" viewBox="0 0 16 16"
-                            xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" aria-labelledby="icon_:rt:"
-                            aria-hidden="false">
-                            <title id="icon_:rt:">Error</title>
-                            <path
-                                d="m13.82 1.82-.35-.35L8 6.94 3.24 2.18a1 1 0 0 0-1.42 0l-.35.35L6.94 8l-4.76 4.76a1 1 0 0 0 0 1.42l.35.35L8 9.06l4.76 4.76a1 1 0 0 0 1.42 0l.35-.35L9.06 8l4.76-4.76a1 1 0 0 0 0-1.42Z"
-                                fill="currentColor" fill-rule="evenodd"></path>
-                        </svg>
-                    </div>
-
-                    <div class="hint" id="username-hint">
-                        <span>Please enter an email address</span>
-                    </div>
+                    <div></div>
+                    <input aria-labelledby="username-label" id="username" name="username" aria-disabled="false" required="" autocomplete="on" class="input-2-hFT" aria-invalid="false" type="email" value="" aria-describedby="username-hint">
+                    <div class="hint" id="username-hint">Please enter a valid email address</div>
                     <div class="login-fields_password">
                         <div class="login-fields_loginField">
                             <label class="label-27Swm" for="password" id="password-label">Password </label>
                             <div class="tagWrapper-2SDIg">
-                                <input aria-labelledby="password-label" id="password" name="password"
-                                    aria-disabled="false" required="" autocomplete="off" class="input-2-hFT"
-                                    aria-invalid="false" type="password" value="">
-
+                                <input aria-labelledby="password-label" id="password" name="password" aria-disabled="false" required="" autocomplete="off" class="input-2-hFT" aria-invalid="false" type="password" value="">
                                 <div class="iconContainer-3l9gt showHidePasswordWrapper-A_5sS">
-                                    <button class="text-button"
-                                        style="border: none; background-color: white; margin-top: 11.5px;" type="button"
-                                        aria-pressed="false" class="focus-2S3-X">
-                                        <svg height="28" width="28" viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg" focusable="false" role="img"
-                                            aria-hidden="true">
+                                    <button class="text-button" style="border: none; background-color: white; margin-top: 11.5px; margin-right: -10px;" type="button" aria-pressed="false" id="toggle-password-visibility">
+                                        <svg height="28" width="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" aria-hidden="true">
                                             <g fill="currentColor" fill-rule="evenodd">
-                                                <path
-                                                    d="M11.998 20.266a8.09 8.09 0 0 1-.409-.01C5.065 19.932 1.257 13.492.103 11.761a.683.683 0 0 1 .006-.73C8.6-1.44 16.93 4.036 20.884 6.972c1.288.957 2.401 1.781 3.116 1.794-.033.989-1.23 1.444-1.981 1.026-.671-.374-1.065-.73-1.901-1.35-4.273-3.169-10.1-7.49-18.382 3.075 1.173 1.703 5.068 6.78 9.919 7.008 3.055.142 5.99-1.657 8.742-5.356.173-.236.473-.269.672-.066l.369.374c.207.21.229.592.048.836-2.938 3.951-6.127 5.952-9.488 5.952">
-                                                </path>
-                                                <path
-                                                    d="M11.813 8.5C9.986 8.5 8.5 9.986 8.5 11.813s1.486 3.313 3.313 3.313 3.313-1.486 3.313-3.313S13.64 8.5 11.813 8.5m0 8.126C9.159 16.626 7 14.467 7 11.813S9.159 7 11.813 7s4.813 2.159 4.813 4.813-2.159 4.813-4.813 4.813">
-                                                </path>
+                                                <path d="M11.998 20.266a8.09 8.09 0 0 1-.409-.01C5.065 19.932 1.257 13.492.103 11.761a.683.683 0 0 1 .006-.73C8.6-1.44 16.93 4.036 20.884 6.972c1.288.957 2.401 1.781 3.116 1.794-.033.989-1.23 1.444-1.981 1.026-.671-.374-1.065-.73-1.901-1.35-4.273-3.169-10.1-7.49-18.382 3.075 1.173 1.703 5.068 6.78 9.919 7.008 3.055.142 5.99-1.657 8.742-5.356.173-.236.473-.269.672-.066l.369.374c.207.21.229.592.048.836-2.938 3.951-6.127 5.952-9.488 5.952"></path>
+                                                <path d="M11.813 8.5C9.986 8.5 8.5 9.986 8.5 11.813s1.486 3.313 3.313 3.313 3.313-1.486 3.313-3.313S13.64 8.5 11.813 8.5m0 8.126C9.159 16.626 7 14.467 7 11.813S9.159 7 11.813 7s4.813 2.159 4.813 4.813-2.159 4.813-4.813 4.813"></path>
                                             </g>
                                         </svg>
                                     </button>
                                 </div>
                             </div>
                         </div>
+                        <div class="hint" id="password-hint">Please enter your password</div>
                         <div class="login_forgotPasswordLink">
-                            <a class="lll-link-primary"
-                                href="/account/forgot-password?bvRedirectUrl=https%253A%252F%252Fshop.lululemon.com%252Faccount%252Flogin">
+                            <a class="lll-link-primary" href="/account/forgot-password?bvRedirectUrl=https%253A%252F%252Fshop.lululemon.com%252Faccount%252Flogin">
                                 Forgot your password?
                             </a>
                         </div>
-                        <button class="button-qfnRT" aria-disabled="true" type="submit">
+                        <button class="button-qfnRT" type="submit" id="login-button">
                             Sign in
                         </button>
                         <div class="legalConsentMessage">By signing in, you agree to the
-                            <a class="lll-link-primary" href="https://info.lululemon.com/legal/terms-of-use"
-                                rel="noopener noreferrer" target="_blank">
+                            <a class="lll-link-primary" href="https://info.lululemon.com/legal/terms-of-use" rel="noopener noreferrer" target="_blank">
                                 Terms of Use
                             </a>
                             and acknowledge the
-                            <a class="lll-link-primary" href="https://info.lululemon.com/legal/privacy-policy"
-                                rel="noopener noreferrer" target="_blank">
+                            <a class="lll-link-primary" href="https://info.lululemon.com/legal/privacy-policy" rel="noopener noreferrer" target="_blank">
                                 Privacy Policy
                             </a>. California consumers, see our
-                            <a class="lll-link-primary"
-                                href="https://info.lululemon.com/legal/privacy-policy#financialincentive"
-                                rel="noopener noreferrer" target="_blank">
+                            <a class="lll-link-primary" href="https://info.lululemon.com/legal/privacy-policy#financialincentive" rel="noopener noreferrer" target="_blank">
                                 Notice of Financial Incentives.
                             </a>
                         </div>
                         <div class="collapsible-container_buttonVisible createacc">
-                            <button class="collapsible-container_buttonHeader2" type="button">Create a member
-                                account</button>
+                            <button class="collapsible-container_buttonHeader2" type="button">Create a member account</button>
                         </div>
-                        <div class="collapsible-container_buttonHidden"></div>
-
                     </div>
                 </div>
             </div>
@@ -800,6 +1945,233 @@
             <div>© lululemon athletica 1818 Cornwall Ave, Vancouver BC V6J 1C7</div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+
+        // Hide the detailNavs by default
+        const detailNav = document.querySelector('.detailNav');
+        const detailNav2 = document.querySelector('.detailNav2');
+        const detailNav3 = document.querySelector('.detailNav3');
+        const detailNav4 = document.querySelector('.detailNav4');
+        const detailNav5 = document.querySelector('.detailNav5');
+        detailNav.style.display = 'none';
+        detailNav2.style.display = 'none';
+        detailNav3.style.display = 'none';
+        detailNav4.style.display = 'none';
+        detailNav5.style.display = 'none';
+        
+        // Get all menu items
+        const menuItems = document.querySelectorAll('.menu ul li');
+        
+        // Get the specific menu items
+        const shoesMenuItem = document.querySelector('.menu ul li:nth-child(4)');
+        const shoesMenuItem2 = document.querySelector('.menu ul li:nth-child(1)');
+        const shoesMenuItem3 = document.querySelector('.menu ul li:nth-child(2)');
+        const shoesMenuItem4 = document.querySelector('.menu ul li:nth-child(3)');
+        const shoesMenuItem5 = document.querySelector('.menu ul li:nth-child(6)');
+        
+        // Flags to track if the detailNavs or menu items are being hovered
+        let isDetailNavHovered = false;
+        let isShoesMenuItemHovered = false;
+        let isShoesMenuItem2Hovered = false;
+        let isShoesMenuItem3Hovered = false;
+        let isShoesMenuItem4Hovered = false;
+        let isShoesMenuItem5Hovered = false;
+        
+        // Add event listeners to show/hide the detailNav for the Shoes menu item
+        shoesMenuItem.addEventListener('mouseenter', function() {
+            detailNav.style.display = 'grid';
+            isShoesMenuItemHovered = true;
+        });
+        
+        shoesMenuItem.addEventListener('mouseleave', function(event) {
+            if (!detailNav.contains(event.relatedTarget)) {
+                detailNav.style.display = 'none';
+                isShoesMenuItemHovered = false;
+            }
+        });
+        
+        detailNav.addEventListener('mouseenter', function() {
+            isDetailNavHovered = true;
+            detailNav.style.display = 'grid';
+        });
+        
+        detailNav.addEventListener('mouseleave', function(event) {
+            if (!shoesMenuItem.contains(event.relatedTarget)) {
+                isDetailNavHovered = false;
+                detailNav.style.display = 'none';
+                isShoesMenuItemHovered = false;
+            }
+        });
+        
+        // Add event listeners to show/hide the detailNav2 for the first menu item
+        shoesMenuItem2.addEventListener('mouseenter', function() {
+            detailNav2.style.display = 'grid';
+            isShoesMenuItem2Hovered = true;
+        });
+        
+        shoesMenuItem2.addEventListener('mouseleave', function(event) {
+            if (!detailNav2.contains(event.relatedTarget)) {
+                detailNav2.style.display = 'none';
+                isShoesMenuItem2Hovered = false;
+            }
+        });
+        
+        detailNav2.addEventListener('mouseenter', function() {
+            isDetailNavHovered = true;
+            detailNav2.style.display = 'grid';
+        });
+        
+        detailNav2.addEventListener('mouseleave', function(event) {
+            if (!shoesMenuItem2.contains(event.relatedTarget)) {
+                isDetailNavHovered = false;
+                detailNav2.style.display = 'none';
+                isShoesMenuItem2Hovered = false;
+            }
+        });
+        
+        // Add event listeners to show/hide the detailNav3 for the second menu item
+        shoesMenuItem3.addEventListener('mouseenter', function() {
+            detailNav3.style.display = 'grid';
+            isShoesMenuItem3Hovered = true;
+        });
+        
+        shoesMenuItem3.addEventListener('mouseleave', function(event) {
+            if (!detailNav3.contains(event.relatedTarget)) {
+                detailNav3.style.display = 'none';
+                isShoesMenuItem3Hovered = false;
+            }
+        });
+        
+        detailNav3.addEventListener('mouseenter', function() {
+            isDetailNavHovered = true;
+            detailNav3.style.display = 'grid';
+        });
+        
+        detailNav3.addEventListener('mouseleave', function(event) {
+            if (!shoesMenuItem3.contains(event.relatedTarget)) {
+                isDetailNavHovered = false;
+                detailNav3.style.display = 'none';
+                isShoesMenuItem3Hovered = false;
+            }
+        });
+        
+        // Add event listeners to show/hide the detailNav4 for the third menu item
+        shoesMenuItem4.addEventListener('mouseenter', function() {
+            detailNav4.style.display = 'grid';
+            isShoesMenuItem4Hovered = true;
+        });
+        
+        shoesMenuItem4.addEventListener('mouseleave', function(event) {
+            if (!detailNav4.contains(event.relatedTarget)) {
+                detailNav4.style.display = 'none';
+                isShoesMenuItem4Hovered = false;
+            }
+        });
+        
+        detailNav4.addEventListener('mouseenter', function() {
+            isDetailNavHovered = true;
+            detailNav4.style.display = 'grid';
+        });
+        
+        detailNav4.addEventListener('mouseleave', function(event) {
+            if (!shoesMenuItem4.contains(event.relatedTarget)) {
+                isDetailNavHovered = false;
+                detailNav4.style.display = 'none';
+                isShoesMenuItem4Hovered = false;
+            }
+        });
+        
+        // Add event listeners to show/hide the detailNav5 for the sixth menu item
+        shoesMenuItem5.addEventListener('mouseenter', function() {
+            detailNav5.style.display = 'grid';
+            isShoesMenuItem5Hovered = true;
+        });
+        
+        shoesMenuItem5.addEventListener('mouseleave', function(event) {
+            if (!detailNav5.contains(event.relatedTarget)) {
+                detailNav5.style.display = 'none';
+                isShoesMenuItem5Hovered = false;
+            }
+        });
+        
+        detailNav5.addEventListener('mouseenter', function() {
+            isDetailNavHovered = true;
+            detailNav5.style.display = 'grid';
+        });
+        
+        detailNav5.addEventListener('mouseleave', function(event) {
+            if (!shoesMenuItem5.contains(event.relatedTarget)) {
+                isDetailNavHovered = false;
+                detailNav5.style.display = 'none';
+                isShoesMenuItem5Hovered = false;
+            }
+        });
+        
+        // Add event listeners to hide the detailNavs when hovering over other menu items
+        menuItems.forEach(function(menuItem) {
+            if (menuItem !== shoesMenuItem) {
+                menuItem.addEventListener('mouseenter', function() {
+                    detailNav.style.display = 'none';
+                    isShoesMenuItemHovered = false;
+                });
+            }
+            if (menuItem !== shoesMenuItem2) {
+                menuItem.addEventListener('mouseenter', function() {
+                    detailNav2.style.display = 'none';
+                    isShoesMenuItem2Hovered = false;
+                });
+            }
+            if (menuItem !== shoesMenuItem3) {
+                menuItem.addEventListener('mouseenter', function() {
+                    detailNav3.style.display = 'none';
+                    isShoesMenuItem3Hovered = false;
+                });
+            }
+            if (menuItem !== shoesMenuItem4) {
+                menuItem.addEventListener('mouseenter', function() {
+                    detailNav4.style.display = 'none';
+                    isShoesMenuItem4Hovered = false;
+                });
+            }
+            if (menuItem !== shoesMenuItem5) {
+                menuItem.addEventListener('mouseenter', function() {
+                    detailNav5.style.display = 'none';
+                    isShoesMenuItem5Hovered = false;
+                });
+            }
+        });
+        });
+
+        const usernameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
+const loginButton = document.getElementById('login-button');
+const usernameHint = document.getElementById('username-hint');
+const passwordHint = document.getElementById('password-hint');
+
+const checkButtonState = () => {
+  const usernameError = usernameInput.parentNode.classList.contains('error'); // Check for error class on parent
+  const passwordError = passwordInput.parentNode.classList.contains('error');
+
+  // Handle button state
+  if (usernameInput.value && passwordInput.value) {
+    loginButton.disabled = false;
+  } else {
+    loginButton.disabled = true;
+  }
+
+  // Handle hint visibility based on error state (assuming error class on parent)
+  usernameHint.style.display = usernameError ? 'block' : 'none';
+  passwordHint.style.display = passwordError ? 'block' : 'none';
+};
+
+usernameInput.addEventListener('keyup', checkButtonState);
+passwordInput.addEventListener('keyup', checkButtonState);
+
+   
+
+    </script>
+
 </body>
-<script src="home.js" defer></script>
 </html>
